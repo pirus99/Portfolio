@@ -1,0 +1,48 @@
+.head-wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: white;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 16px;
+
+
+        img {
+            height: 56px;
+        }
+
+        a {
+            margin-top: 12px;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
+
+            .slide-toggle {
+                height: 20px !important;
+                color: rgb(27, 161, 81) !important;
+            }
+
+            a {
+                margin: 8px;
+            }
+
+            .DE {
+                margin-left: 5px;
+            }
+        }
+    }
+}
