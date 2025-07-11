@@ -3,3 +3,55 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-rev {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-col-rev {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mw-1440px {
+    max-width: 1440px;
+}
+
+.d-none {
+    display: none;
+}
+

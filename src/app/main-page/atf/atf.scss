@@ -45,6 +45,16 @@
     }
 }
 
+.soc-img {
+    &:hover {
+        color: #215c92;
+        stroke: #215c92;
+        background-color: #215c92;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
 h1 {
     font-size: 112px;
     color: white;
