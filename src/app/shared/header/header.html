@@ -1,13 +1,13 @@
 <div class="head-wrap">
     <nav class="header">
         <img src="logo-mp.png" alt="Logo">
-        <a>About Me</a>
-        <a>Skills</a>
-        <a>Projects</a>
-        <a>Contact</a>
+        <a>{{lang.about}}</a>
+        <a>{{lang.skills}}</a>
+        <a>{{lang.projects}}</a>
+        <a>{{lang.contact}}</a>
         <div class="lang-switcher" id="langSwitcher">
             <a id="langEN">EN</a>
-            <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
+            <mat-slide-toggle (click)="toggleLanguage();" [(ngModel)]="isChecked"></mat-slide-toggle>
             <a id="langDE" class="DE">DE</a>
         </div>
     </nav>
