@@ -2,14 +2,16 @@
     <div class="main-content">
         <div class="title-image-wrap">
             <div class="btn-wrap-col-l">
-                <button class="btn" onclick="helloWorld()">{{lang.helloworld}}</button>
+                <div class="hello-btn-wrap" id="helloBtnWrap">
+                    <app-blue-hover-btn></app-blue-hover-btn>
+                </div>
                 <h1>{{lang.fullstack}}</h1>
             </div>
             <img src="" alt="Picture of Miles">
         </div>
         <div class="btn-wrap-col-r">
             <h1>{{lang.developer}}</h1>
-            <button class="btn">{{lang.getintouch}}</button>
+            <button class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'" (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">{{lang.getintouch}}</button>
         </div>
         <div class="social-wrap w-90 mw-1440px flex">
             <div class="flex-col">

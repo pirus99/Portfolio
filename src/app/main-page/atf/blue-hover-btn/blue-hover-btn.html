@@ -1,0 +1,18 @@
+<div #btnWrapper class="btn-wrapper">
+    <div class="image-wrap">
+        <div class="icon-wrap"
+            [ngStyle]="{transform: hover ? 'translateX(' + iconShift + 'px) rotate(360deg)' : 'translateX(-50px) rotate(0deg)', opacity: hover ? '1' : '0'}">
+            <img src="img/atf/waving_hand.svg" alt="" />
+        </div>
+    </div>
+    <button class="hover-blue" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <span class="text-wrapper" #textWrapper>
+            <span #defaultText class="button-text" [class.visible]="!hover" [class.hidden]="hover">
+                {{ this.lang.helloworld }}
+            </span>
+            <span #hoverText class="button-text" [class.visible]="hover" [class.hidden]="!hover">
+                {{ this.lang.helloworldHover }}
+            </span>
+        </span>
+    </button>
+</div>

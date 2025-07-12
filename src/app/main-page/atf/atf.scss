@@ -37,19 +37,22 @@
     border-radius: 16px;
     padding: 8px 16px;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: Bricolage;
 
     &:hover {
-        box-shadow: 2px 4px 8px white;
         cursor: pointer;
     }
 }
 
+.hello-btn-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
 .soc-img {
     &:hover {
-        color: #215c92;
-        stroke: #215c92;
-        background-color: #215c92;
+        background-color: #4c67eb;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -60,3 +63,7 @@ h1 {
     color: white;
     margin: 0;
 }
+
+
+
+

@@ -1,14 +1,18 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { buttonHoverAnimation } from './animation-module';
 import { LangService } from '../../lang-service';
 import { App } from '../../app';
+import { BlueHoverBtn } from './blue-hover-btn/blue-hover-btn';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
 
+
 @Component({
   selector: 'app-atf',
-  imports: [],
+  imports: [BlueHoverBtn],
   templateUrl: './atf.html',
-  styleUrl: './atf.scss'
+  styleUrl: './atf.scss',
+  animations: [buttonHoverAnimation]
 })
 export class Atf {
   ngOnInit() {
@@ -30,4 +34,12 @@ export class Atf {
       }
     })
   }
+
+  hover = false;
+
+  standardHoverAnimation = false;
+
+   toggleHover() {
+     this.standardHoverAnimation = !this.standardHoverAnimation; 
+  }  
 }
