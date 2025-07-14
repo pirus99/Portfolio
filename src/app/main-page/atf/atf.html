@@ -5,19 +5,26 @@
                 <div class="hello-btn-wrap" id="helloBtnWrap">
                     <app-blue-hover-btn></app-blue-hover-btn>
                 </div>
-                <h1>{{lang.fullstack}}</h1>
+                <h1 appHighlightLetter class="title-one">{{lang.fullstack}}</h1>
             </div>
-            <img src="" alt="Picture of Miles">
+            <div class="image-border-wrap" (mouseenter)="imageHover=true; colorImage();" (mouseleave)="imageHover=false; colorImage();">
+                    <img id="greyImage" src="img/atf/polaroid-frame.png" alt="Picture of Miles">
+                    @if (!imageHover) {
+                        <p>Miles :)</p>
+                    } @else {
+                        <p>Miles :D</p>
+                    }
+            </div>
         </div>
         <div class="btn-wrap-col-r">
-            <h1>{{lang.developer}}</h1>
+            <h1 appHighlightLetter class="title-two">{{lang.developer}}</h1>
             <button class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'" (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">{{lang.getintouch}}</button>
         </div>
         <div class="social-wrap w-90 mw-1440px flex">
             <div class="flex-col">
-                <a href="linked-in.com"><img class="soc-img" src="img/social/linked-in.svg" alt="Contact Linked In"></a>
-                <a href="github.com"><img class="soc-img" src="img/social/git-hub.svg" alt="View Github"></a>
-                <a href="Miles.Pickull@gmx.de"><img class="soc-img" src="img/social/mail.svg" alt="Contact Mail"></a>
+                <a href="https://linkedin.com"><img class="soc-img" src="img/social/linked-in.svg" alt="Contact Linked In"></a>
+                <a href="https://github.com/pirus99"><img class="soc-img" src="img/social/git-hub.svg" alt="View Github"></a>
+                <a href="mailto:Miles.Pickull@gmx.de"><img class="soc-img" src="img/social/mail.svg" alt="Contact Mail"></a>
             </div>
         </div>
     </div>

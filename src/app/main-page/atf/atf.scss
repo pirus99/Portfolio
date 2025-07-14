@@ -10,6 +10,7 @@
 
     .main-content {
         width: 95%;
+        margin-top: 8vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,7 +19,7 @@
         .title-image-wrap {
             display: flex;
             flex-direction: row;
-            margin-right: 10vw;
+            margin-right: 2vw;
         }
 
         .btn-wrap-col-r {
@@ -50,6 +51,12 @@
     flex-direction: column;
 }
 
+.social-wrap {
+    .flex-col {
+        margin-top: -1px;
+    }
+}
+
 .soc-img {
     &:hover {
         background-color: #4c67eb;
@@ -64,6 +71,39 @@ h1 {
     margin: 0;
 }
 
+.image-border-wrap {
+    margin-left: 6vw;
+    rotate: (8deg);
 
+    img {
+        margin-top: -24px;
+        background-image: url('../../../../public/img/atf/test-pic.jpg');
+        background-size: 260px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: 220px;
+        filter: grayscale(100%);
+    }
 
+    .hover {
+        filter: grayscale(0%);
+    }
 
+    p {
+        position: absolute;
+        top: 75%;
+        left: 28%;
+        margin-top: 8px;
+        font-family: Kalam;
+        font-size: 24px;
+    }
+
+    .title-one {
+        width: 420px;
+    }
+
+    .title-two {
+        width: 600px;
+    }
+
+}

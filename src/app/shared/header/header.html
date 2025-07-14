@@ -1,10 +1,34 @@
 <div class="head-wrap">
     <nav class="header">
         <img src="logo-mp.png" alt="Logo">
-        <a>{{lang.about}}</a>
-        <a>{{lang.skills}}</a>
-        <a>{{lang.projects}}</a>
-        <a>{{lang.contact}}</a>
+        <div class="hover-1-wrap">
+            <div class="hover-1">
+                <a>
+                    <p>{{lang.about}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="hover-1-wrap">
+            <div class="hover-1">
+                <a>
+                    <p>{{lang.skills}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="hover-1-wrap">
+            <div class="hover-1">
+                <a>
+                    <p>{{lang.projects}}</p>
+                </a>
+            </div>
+        </div>
+        <div class="hover-1-wrap">
+            <div class="hover-1">
+                <a>
+                    <p>{{lang.contact}}</p>
+                </a>
+            </div>
+        </div>
         <div class="lang-switcher" id="langSwitcher">
             <a id="langEN">EN</a>
             <mat-slide-toggle (click)="toggleLanguage();" [(ngModel)]="isChecked"></mat-slide-toggle>

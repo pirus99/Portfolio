@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { buttonHoverAnimation } from './animation-module';
 import { LangService } from '../../lang-service';
 import { App } from '../../app';
 import { BlueHoverBtn } from './blue-hover-btn/blue-hover-btn';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
+import { HighlightLetterDirective } from './highlight';
 
 
 @Component({
   selector: 'app-atf',
-  imports: [BlueHoverBtn],
+  imports: [BlueHoverBtn, HighlightLetterDirective],
   templateUrl: './atf.html',
   styleUrl: './atf.scss',
   animations: [buttonHoverAnimation]
@@ -42,4 +43,15 @@ export class Atf {
    toggleHover() {
      this.standardHoverAnimation = !this.standardHoverAnimation; 
   }  
+
+  imageHover = false;
+  colorImage() {
+    const greyImage = document.getElementById('greyImage');
+    if(this.imageHover){
+      if (greyImage) {
+        greyImage.classList.add('hover');
+      }} else if (greyImage) {
+        greyImage.classList.remove('hover');
+      }  
+  }
 }
