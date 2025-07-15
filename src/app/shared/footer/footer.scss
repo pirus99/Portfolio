@@ -1,0 +1,27 @@
+    .foot-content {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        max-width: 1360px;
+        margin: auto;
+        background-color: rgb(82, 66, 66);
+
+        .foot-title {
+            img {
+                height: 60px;
+            }
+        }
+
+        nav {
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            a {
+                text-decoration: none;
+                color: #F8F9FA;
+            }
+        }
+    }

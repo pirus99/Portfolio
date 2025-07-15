@@ -1,0 +1,9 @@
+<div class="image-wrap">
+    <div class="icon-wrap"
+        [ngStyle]="{transform: hover ? 'translateX(' + iconShift + 'px) rotate(360deg)' : 'translateX(-50px) rotate(0deg)', opacity: hover ? '1' : '0'}">
+        <img src="{{this.image}}" alt="" />
+    </div>
+</div>
+<div class="button-wrap mini-blue-hover" (mouseenter)="this.hover=true" (mouseleave)="this.hover=false">
+    <a href="{{this.link}}">{{this.text}}</a>
+</div>

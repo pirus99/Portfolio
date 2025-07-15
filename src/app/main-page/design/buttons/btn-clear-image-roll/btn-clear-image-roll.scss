@@ -1,0 +1,42 @@
+.image-wrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 98%;
+}
+
+.icon-wrap {
+    height: 24px;
+    width: 24px;
+    margin: 0 0 8px 0;
+    opacity: 0;
+    transform-origin: center center;
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+img {
+    height: 28px;
+    width: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: #F8F9FA;
+}
+
+.mini-blue-hover {
+    background-color: none;
+    padding: 10px 24px;
+    border-radius: 18px;
+    transform-origin: center center;
+    transition: all 0.4s ease-in-out;
+}
+
+.mini-blue-hover:hover {
+    background-color: #4c67eb;
+}
+
+
+.btn-wrapper.hovered .icon-wrap,
+.icon-wrap.active {
+    opacity: 1;
+}

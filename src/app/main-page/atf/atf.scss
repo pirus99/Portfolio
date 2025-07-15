@@ -58,9 +58,11 @@
 }
 
 .soc-img {
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in,;
     &:hover {
         background-color: #4c67eb;
-        border-radius: 50%;
         overflow: hidden;
     }
 }
