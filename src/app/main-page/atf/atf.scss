@@ -16,17 +16,29 @@
         align-items: center;
         flex-direction: column;
 
-        .title-image-wrap {
+        .title-wrap {
+            width: 700px;
             display: flex;
-            flex-direction: row;
-            margin-right: 2vw;
+            flex-direction: column;
+            margin: auto;
         }
 
+        .title-image-wrap {
+            display: flex;
+            width: 100%;
+        }
+
+        .btn-wrap-col-l {
+            width: 50%;
+            margin-right: 64px;
+            display: flex;
+            flex-direction: column;
+            
+        }
         .btn-wrap-col-r {
             display: flex;
             flex-direction: column;
             align-items: end;
-            margin-left: 10vw;
         }
 
     }
@@ -93,7 +105,7 @@ h1 {
 
     p {
         position: absolute;
-        top: 75%;
+        top: 72%;
         left: 28%;
         margin-top: 8px;
         font-family: Kalam;
@@ -101,11 +113,11 @@ h1 {
     }
 
     .title-one {
-        width: 420px;
+        width: 440px;
     }
 
     .title-two {
-        width: 600px;
+        width: 610px;
     }
 
 }
