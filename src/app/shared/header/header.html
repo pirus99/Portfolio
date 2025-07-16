@@ -6,9 +6,22 @@
         <app-btn-clear-line-wave [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
         <app-btn-clear-line-z [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z>
         <div class="lang-switcher" id="langSwitcher">
-            <a id="langEN">EN</a>
-            <mat-slide-toggle (click)="toggleLanguage();" [(ngModel)]="isChecked"></mat-slide-toggle>
-            <a id="langDE" class="DE">DE</a>
+            <div class="hover-wrap {{langENclasses}}">
+                <a id="langEN" (click)="setLangEN()" onclick="langSwitch.checked = false" class="EN" onmouseenter="imgHoverEN.classList.remove('d-none')" onmouseleave="imgHoverEN.classList.add('d-none')">EN</a>
+                <div id='imgHoverEN' class="img-hover d-none">
+                    <img src="img/design/buttons/hover-lang.svg" alt="hover image language">
+                </div>
+            </div>
+            <label class="switch">
+                <input id="langSwitch" type="checkbox" (change)="toggleLanguage();"/>
+                <span class="slider round"></span>
+            </label>
+            <div class="hover-wrap {{langDEclasses}}">
+                <a id="langDE" (click)="setLangDE();" onclick="langSwitch.checked = true" class="DE" onmouseenter="imgHoverDE.classList.remove('d-none');" onmouseleave="imgHoverDE.classList.add('d-none')">DE</a>
+                <div id='imgHoverDE' class="img-hover d-none">
+                    <img src="img/design/buttons/hover-lang.svg" alt="hover image language">
+                </div>
+            </div>
         </div>
     </nav>
 </div>
