@@ -1,0 +1,30 @@
+.hover-circle-wrap {
+
+    .btn {
+
+        a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+
+            &:hover .img-wrap {
+                    height: 42px;
+                    transition: height 0.2s ease-in;
+                }
+
+            .img-wrap {
+                position: absolute;
+                top: -10px;
+                left: -20px;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.2s ease-in;
+
+                img {
+                    height: 40px;
+                    width: 110px;
+                }
+            }
+        }
+    }
+}

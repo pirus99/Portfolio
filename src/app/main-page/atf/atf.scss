@@ -17,28 +17,28 @@
         flex-direction: column;
 
         .title-wrap {
-            width: 700px;
+            width: 720px;
             display: flex;
             flex-direction: column;
-            margin: auto;
-        }
+            margin: 0;
 
-        .title-image-wrap {
-            display: flex;
-            width: 100%;
-        }
+            .title-image-wrap {
+                display: flex;
+                width: 100%;
 
-        .btn-wrap-col-l {
-            width: 50%;
-            margin-right: 64px;
-            display: flex;
-            flex-direction: column;
-            
-        }
-        .btn-wrap-col-r {
-            display: flex;
-            flex-direction: column;
-            align-items: end;
+                .btn-wrap-col-l {
+                    width: 50%;
+                    margin-right: 36px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .btn-wrap-col-r {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
         }
 
     }
@@ -72,7 +72,8 @@
 .soc-img {
     border-radius: 50%;
     background-color: transparent;
-    transition: background-color 0.3s ease-in,;
+    transition: background-color 0.3s ease-in, ;
+
     &:hover {
         background-color: #4c67eb;
         overflow: hidden;

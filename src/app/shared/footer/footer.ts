@@ -3,7 +3,7 @@ import { App } from '../../app';
 import { LangService } from '../../lang-service';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
-import { BtnClearImageRoll } from '../../main-page/design/buttons/btn-clear-image-roll/btn-clear-image-roll';
+import { BtnClearImageRoll } from '../../shared/design/buttons/btn-clear-image-roll/btn-clear-image-roll';
 
 @Component({
   selector: 'app-footer',

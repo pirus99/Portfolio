@@ -19,11 +19,6 @@
 
         a {
             margin-top: 12px;
-
-            &:hover {
-                text-decoration: underline;
-                cursor: pointer;
-            }
         }
 
         .lang-switcher {
@@ -46,58 +41,4 @@
         }
     }
 
-    .hover-1 {
-        height: 40%;
-        overflow: visible;
-        padding: 10px;
-        width: 90%;
-        a {
-            z-index: 2;
-            margin-top: 0;
-            p {
-                margin-top: 0;
-                text-align: center;
-            }
-        }
-
-    }
-
-    .hover-1 {
-        position: relative;
-        overflow: hidden;
-        height: 40%;
-        padding: 10px;
-        width: 90%;
-        a {
-            z-index: 2;
-            margin-top: 0;
-            p {
-                margin-top: 0;
-                text-align: center;
-            }
-        }
-    }
-
-    .hover-1::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('../../../../public/img/header/hover-circle.svg');
-        background-size: cover;
-        background-position: center;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.5s ease, stroke 0.5s ease;
-        z-index: 1;
-        pointer-events: none;
-        stroke: 0;
-    }
-
-    .hover-1:hover::before {
-        transform: scaleY(1);
-        stroke: 1;
-    }
 }
