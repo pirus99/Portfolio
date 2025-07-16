@@ -1,3 +1,8 @@
+:host {
+  --img-wrap-width: 0px;
+  --img-wrap-offset: 0px;
+}
+
 .hover-line-straight-wrap {
 
     .btn {
@@ -8,14 +13,14 @@
             color: white;
 
             &:hover .img-wrap {
-                    width: 100px;
-                    transition: width 0.2s ease-in;
-                }
+                width: var(--img-wrap-width);
+                transition: width 0.2s ease-in;
+            }
 
             .img-wrap {
                 position: absolute;
                 top: -8px;
-                left: -32px;
+                left: var(--img-wrap-offset);
                 width: 0;
                 overflow: hidden;
                 transition: width 0.2s ease-in;
