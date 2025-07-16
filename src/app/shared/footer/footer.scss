@@ -16,8 +16,8 @@
             width: 95%;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            align-items: end;
+            padding-bottom: 20px;
 
             a {
                 text-decoration: none;
@@ -25,3 +25,7 @@
             }
         }
     }
+
+app-btn-clear-line-z {
+    margin-top: 4px;
+}

@@ -4,10 +4,11 @@ import { LangService } from '../../lang-service';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
 import { BtnClearImageRoll } from '../../shared/design/buttons/btn-clear-image-roll/btn-clear-image-roll';
+import { BtnClearLineZ } from '../design/buttons/btn-clear-line-z/btn-clear-line-z';
 
 @Component({
   selector: 'app-footer',
-  imports: [BtnClearImageRoll],
+  imports: [BtnClearImageRoll, BtnClearLineZ],
   templateUrl: './footer.html',
   styleUrl: './footer.scss'
 })

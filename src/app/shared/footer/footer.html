@@ -5,9 +5,7 @@
             <p>&copy; Miles Pickull 2025</p>
         </div>
         <nav class="foot-nav">
-            <div class="button-wrap">
-                <a href="legal-notice">{{lang.legalNotice}}</a>
-            </div>
+            <app-btn-clear-line-z [left]="0" [link]="'legal'" [text]="this.lang.legalNotice"></app-btn-clear-line-z>
             <app-btn-clear-image-roll [link]="'https://github.com'" [text]="'GitHub'" [image]="'img/social/git-hub.svg'"></app-btn-clear-image-roll>
             <app-btn-clear-image-roll [link]="'https://www.linkedin.com/'" [text]="'LinkedIn'" [image]="'img/social/linked-in.svg'"></app-btn-clear-image-roll>
             <app-btn-clear-image-roll [link]="'mailto:miles.pickull@gmx.de'" [text]="'EMail'" [image]="'img/social/mail.svg'"></app-btn-clear-image-roll>

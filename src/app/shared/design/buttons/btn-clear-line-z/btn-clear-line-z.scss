@@ -1,3 +1,7 @@
+:host {
+  --img-wrap-left: 0px;
+}
+
 .hover-circle-wrap {
 
     .btn {
@@ -15,7 +19,7 @@
             .img-wrap {
                 position: absolute;
                 top: -8px;
-                left: -12px;
+                left: var(--img-wrap-left);
                 width: 0;
                 overflow: hidden;
                 transition: width 0.2s ease-in;
