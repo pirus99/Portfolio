@@ -20,6 +20,24 @@ export const buttonHoverAnimation = trigger('buttonHover', [
   ])
 ]);
 
+export const buttonHoverAnimationBlack = trigger('buttonHoverBlack', [
+  state('normal', style({
+    transform: 'translate(0, 0)',
+    boxShadow: '2px 4px 2px black',
+    backgroundColor: 'transparent',
+  })),
+  state('hover', style({
+    transform: 'translate(2px, 4px)',
+    backgroundColor: '#e77e60'
+  })),
+  transition('normal => hover', [
+    animate('200ms ease-in-out') 
+  ]),
+  transition('hover => normal', [
+    animate('300ms ease-in-out') 
+  ])
+]);
+
 @NgModule({
   declarations: [],
   imports: [

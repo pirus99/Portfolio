@@ -1,1 +1,36 @@
-<p>about works!</p>
+<div class="w-100">
+    <div class="about-content" id="aboutMe">
+        <div class="wrap-left">
+            <div class="wrap-yellow">
+                <img class="yellow-bg" src="img/about/Yellow.png" alt="">
+                <div class="img-wrap flex">
+                    <img src="img/about/state-location.svg" alt="Map Marker">
+                    <p>{{this.lang.basedIn}}</p>
+                </div>
+            </div>
+            <div class="wrap-blue">
+                <img class="blue-bg" src="img/about/Blue.png" alt="">
+                <div class="img-wrap flex">
+                    <img src="img/about/state-relocation.svg" alt="Relocate Icon, two Map Markers">
+                    <p>{{this.lang.relocate}}</p>
+                </div>
+            </div>
+            <div class="wrap-orange">
+                <img class="orange-bg" src="img/about/Orange.png" alt="">
+                <div class="img-wrap flex">
+                    <img src="img/about/status-remote.svg" alt="Remote Icon">
+                    <p>{{this.lang.remote}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-right">
+            <h5>{{this.lang.whoIs}}</h5>
+            <app-title-line-blue [text]="this.lang.title"></app-title-line-blue>
+            <p>{{this.lang.text}}</p>
+            <div class="btn-wrap">
+                <button class="btn" [@buttonHoverBlack]="standardHoverAnimation ? 'hover' : 'normal'"
+                    (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">{{this.lang.talk}}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+:host {
+    --img-wrap-width: 0px;
+    --img-wrap-offset: 0px;
+}
+
+.hover-line-straight-wrap {
+
+    .btn {
+        position: relative;
+        text-decoration: none;
+        color: rgb(26, 23, 23);
+
+        &:hover .img-wrap {
+            width: var(--img-wrap-width);
+            transition: width 0.2s ease-in;
+        }
+
+        .img-wrap {
+            position: absolute;
+            top: 68px;
+            left: var(--img-wrap-offset);
+            width: 0;
+            overflow: hidden;
+            transition: width 0.2s ease-in;
+
+            img {
+                height: 20px;
+                width: 300px;
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 64px;
+    margin-top: 0;
+    margin-bottom: 0;
+}

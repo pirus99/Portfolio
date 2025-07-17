@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { buttonHoverAnimation } from './animation-module';
+import { buttonHoverAnimation } from '../animation-module';
 import { LangService } from '../../lang-service';
 import { App } from '../../app';
 import { BlueHoverBtn } from './blue-hover-btn/blue-hover-btn';
