@@ -1,4 +1,4 @@
-<div class="w-100">
+<div class="w-100" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false" (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
     <div class="about-content" id="aboutMe">
         <div class="wrap-left">
             <div class="wrap-yellow">
@@ -25,7 +25,7 @@
         </div>
         <div class="wrap-right">
             <h5>{{this.lang.whoIs}}</h5>
-            <app-title-line-blue [text]="this.lang.title"></app-title-line-blue>
+            <app-title-line-blue [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-line-blue>
             <p>{{this.lang.text}}</p>
             <div class="btn-wrap">
                 <button class="btn" [@buttonHoverBlack]="standardHoverAnimation ? 'hover' : 'normal'"

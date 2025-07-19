@@ -21,6 +21,7 @@ export class About {
   langDE = langDE;
   langEN = langEN;
   lang = langEN;
+  isVisible = false;
 
   constructor(private langService: LangService) { }
 

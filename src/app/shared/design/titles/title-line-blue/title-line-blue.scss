@@ -13,7 +13,7 @@
         &:hover .img-wrap {
             width: var(--img-wrap-width);
             transition: width 0.2s ease-in;
-        }
+        } 
 
         .img-wrap {
             position: absolute;
@@ -35,4 +35,9 @@ h2 {
     font-size: 64px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.animate {
+    width: var(--img-wrap-width) !important;
+    transition: width 0.2s ease-in;
 }

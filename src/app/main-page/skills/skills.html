@@ -1,1 +1,38 @@
-<p>skills works!</p>
+<div class="w-100 bg-wrap">
+    <div class="content-wrap">
+        <div class="upper-wrap">
+            <div class="title-wrap">
+                <h5>My Stack</h5>
+                <h2>Skill Set</h2>
+            </div>
+            <div class="text-wrap">
+                <p>I am a software developer with over</p>
+            </div>
+        </div>
+        <div class="lower-wrap">
+            <div class="flex-col">
+                <div class="icon-wrap">
+                    @for (icon of this.iconsRow1; track $index) {
+                    <div class="icon">
+                        <img src="img/skills/icons/{{this.iconsRow1[$index].icon}}"
+                            alt="{{this.iconsRow1[$index].name}}">
+                        <h5>{{this.iconsRow1[$index].name}}</h5>
+                    </div>
+                    }
+                </div>
+                <div class="icon-wrap">
+                    @for (icon of this.iconsRow2; track $index) {
+                    <div class="icon">
+                        <img src="img/skills/icons/{{this.iconsRow2[$index].icon}}"
+                            alt="{{this.iconsRow2[$index].name}}">
+                        <h5>{{this.iconsRow2[$index].name}}</h5>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="peel-wrap">
+
+            </div>
+        </div>
+    </div>
+</div>

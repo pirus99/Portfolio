@@ -1,9 +1,10 @@
-import { Component, Input, HostBinding, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { App } from '../../../../app';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-title-line-blue',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './title-line-blue.html',
   styleUrl: './title-line-blue.scss'
 })
@@ -11,14 +12,19 @@ export class TitleLineBlue {
 
   @Input() text: string = '';
   @Input() link: string = '';
-
-  @ViewChild('textP') textP!: ElementRef;
+  @Input() isVisible: boolean = false;
 
   @HostBinding('style.--img-wrap-width') imgWrapWidth = '0px';
   @HostBinding('style.--img-wrap-offset') imgWrapOffset = '0px';
 
   width = 0;
   offset = 0
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.updateWidth();
+    }, 100);
+  }
 
   updateWidth() {
     if(App.lang === 'langDE'){

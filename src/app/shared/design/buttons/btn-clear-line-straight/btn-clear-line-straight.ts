@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild, HostBinding } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { App } from '../../../../app';
 
 @Component({
@@ -10,8 +10,6 @@ import { App } from '../../../../app';
 export class BtnClearLineStraight {
   @Input() text: string = '';
   @Input() link: string = '';
-
-  @ViewChild('textP') textP!: ElementRef;
 
   @HostBinding('style.--img-wrap-width') imgWrapWidth = '0px';
   @HostBinding('style.--img-wrap-offset') imgWrapOffset = '0px';
