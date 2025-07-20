@@ -1,6 +1,9 @@
 .bg-wrap {
+    padding-top: 144px;
+    padding-bottom: 288px;
     background-image: url('../../../../public/background/skills.png');
     background-size: cover;
+    background-position: bottom;
     background-repeat: no-repeat;
 
     .content-wrap {
@@ -15,10 +18,43 @@
             align-items: center;
 
             .text-wrap {
-                background-image: url('../../../../public/img/skills/skills_normal.png');
-                background-size: cover;
-                background-repeat: no-repeat;
+                width: 50%;
+                max-width: 780px;
+                position: relative;
+                display: flex;
+                text-align: start;
+                justify-content: center;
+                margin-top: 36px;
+                margin-left: 48px;
+                padding-top: 32px;
+                padding-bottom: 32px;
+
+                img {
+                    max-height: fit-content;
+                    width: 100%;
+                }
+
+                p {
+                    position: absolute;
+                    margin: 16px;
+                    top: 30%;
+                }
             }
+
+            .title-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                justify-content: center;
+            
+
+            h5 {
+                color: rgb(243, 242, 242);;
+                margin-bottom: 4px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
         }
 
         .lower-wrap {
@@ -53,6 +89,33 @@
                         color: white;
                         text-align: center;
                     }
+                }
+            }
+
+            .peel-wrap {
+                position: relative;
+                width: 25%;
+                rotate: 8deg;
+                margin-top: 80px;
+                margin-left: 24px;
+
+                #peelDefault {
+                    position: relative;
+                    z-index: 10;
+                }
+
+                #peelHover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 9;
+                }
+
+                #peelOpen{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 6;
                 }
             }
         }

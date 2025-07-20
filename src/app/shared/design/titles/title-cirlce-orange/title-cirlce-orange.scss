@@ -1,0 +1,63 @@
+.hover-circle-orange-wrap {
+    .btn {
+        position: relative;
+        text-decoration: none;
+        color: rgb(243, 242, 242);
+
+        h2 {
+            position: relative;
+            font-size: 64px;
+            margin-top: 0;
+            margin-bottom: 0;
+            z-index: 10;
+        }
+
+
+        .img-clip {
+            position: absolute;
+            top: -8px;
+            left: var(--img-wrap-offset);
+            width: fit-content;
+            height: fit-content;
+            overflow: hidden;
+
+            .animation {
+                opacity: 1;
+                transform: rotate(0deg);
+                transform-origin: top right;
+
+                transition:
+                    transform 0.1s ease-out,
+                    opacity 0.2s ease-out;
+            }
+
+            &:hover {
+                .img-wrap {
+                    opacity: 1;
+                    transform: rotate(0deg);
+                    transform-origin: top right;
+
+                    transition:
+                        transform 0.1s ease-out,
+                        opacity 0.2s ease-out;
+                }
+            }
+        }
+
+        .img-wrap {
+            opacity: 0;
+            transform: rotate(-90deg);
+            transform-origin: top right;
+
+            transition:
+                transform 0.1s ease-out,
+                opacity 0.2s ease-out;
+
+            img {
+                height: 80px;
+                object-fit: fill;
+                display: block;
+            }
+        }
+    }
+}
