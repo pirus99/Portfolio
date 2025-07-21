@@ -1,0 +1,29 @@
+<div class="w-100 mb-144 mt-144" (mouseenter)="isVisible = true" (mouseleave)="isVisible = false">
+    <div class="project-wrap flex-col">
+        <div class="upper-wrap flex">
+            <div class="text-wrap flex-col">
+                <div class="title-wrap">
+                    <div class="flex-end">
+                        <h5>{{this.lang.craft}}</h5>
+                    </div>
+                    <app-title-line-yellow [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-line-yellow>
+                </div>
+                <div>
+                    <p>{{this.lang.text}}</p>
+                </div>
+            </div>
+            <app-animated-project [title]="this.lang.join.title" [btnText]="this.lang.join.button" [btnLink]="'/join'"
+                [text]="this.lang.join.text" [bgImg]="'join-laptop.svg'" [bgAlt]="this.lang.join.title">
+            </app-animated-project>
+        </div>
+        <div class="lower-wrap flex">
+            <app-normal-project [title]="this.lang.loco.title" [btnText]="this.lang.loco.button" [btnLink]="'/pollo-loco'"
+                [text]="this.lang.loco.text" [bgImg]="'pollo-loco.png'" [bgAlt]="this.lang.loco.title">
+            </app-normal-project>
+            <app-normal-project [title]="this.lang.bubble.title" [btnText]="this.lang.bubble.button" [btnLink]="'/da-bubble'"
+                [text]="this.lang.bubble.text" [bgImg]="'DABubble.svg'" [bgAlt]="this.lang.bubble.title">
+            </app-normal-project>
+
+        </div>
+    </div>
+</div>

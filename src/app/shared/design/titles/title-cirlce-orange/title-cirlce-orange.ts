@@ -41,11 +41,9 @@ export class TitleCirlceOrange {
     if (App.lang === 'langDE') {
       this.width = 600;
       this.offset = 24;
-      this.text = this.text;
     } else {
       this.width = 320;
       this.offset = -12;
-      this.text = this.text;
     }
     this.imgWrapWidth = `${this.width}px`;
     this.imgWrapOffset = `${this.offset}px`;

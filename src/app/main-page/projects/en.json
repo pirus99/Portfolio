@@ -1,0 +1,20 @@
+{
+    "title": "Projects",
+    "craft": "MY CRAFT",
+    "text": "Here you can have a look on some of my Projects, please klick on the button to test them out!",
+    "loco": {
+        "title": "El Pollo Loco",
+        "text": "Jump and Run with throw Functions based on object-oriented approach. Help Pepe to get Coins, Marinade Chickens and fight aginst the Crazy Chicken.",
+        "button": "Project details"
+    },
+    "bubble": {
+        "title": "DA Bubble",
+        "text": "This App is a Slack Clone. It revolutionizes team communication and collaboration with its intuitive interface, realtime messaging, and robust channel organization.",
+        "button": "Project details"
+    },
+    "join": {
+        "title": "Join",
+        "text": "Task Manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
+        "button": "Project details"
+    }
+}

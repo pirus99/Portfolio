@@ -1,0 +1,27 @@
+<div class="mini-project flex-col">
+    <div class="upper-wrap">
+        <div class="bg-img-wrap">
+            <div class="ani-wrap" [ngClass]="hover ? 'hover-zoom' : ''">
+                <img src="img/projects/{{this.bgImg}}" (alt)="this.bgAlt" [ngClass]="animation ? 'animate' : ''">
+            </div>
+            <div class="sticker">
+                <img src="img/projects/sticker.svg" alt="Featured Project" [ngClass]="hover ? 'd-none' : ''">
+            </div>
+        </div>
+        <div id="hoverWrap" class="hover-wrap" (mouseenter)="this.hover = true; this.animation = false" (mouseleave)="this.hover = false; this.animation = true"
+            [ngClass]="hover ? 'hover-on' : ''">
+            <div class="btn-right-wrap">
+                <a href="{{this.btnLink}}">
+                    <button class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
+                        (mouseenter)="this.toggleHover()" (mouseleave)="this.toggleHover()">
+                        {{this.btnText}}
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="lower-wrap">
+        <h4>{{this.title}}</h4>
+        <p>{{this.text}}</p>
+    </div>
+</div>

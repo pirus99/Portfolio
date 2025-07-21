@@ -1,0 +1,20 @@
+{
+    "title": "Projekte",
+    "craft": "Meine",
+    "text": "Hier können Sie einen Blick auf meine Projekte werfen, Bitte drücken sie auf den Button und testen Sie selbst!",
+    "loco": {
+        "title": "El Pollo Loco",
+        "text": "Jump and Run with throw Functions based on object-oriented approach. Help Pepe to get Coins, Marinade Chickens and fight aginst the Crazy Chicken.",
+        "button": "Projekt Details"
+    },
+        "bubble": {
+        "title": "DA Bubble",
+        "text": "Diese App ist nach vorbild von Slack gebaut. Sie revolutioniert Team Kommunikation un Collaboration mit seinem eigenen Intuitiven Webinterface, Echtzeit Nachrichtien übermittlung und Robuster Kanal Organisation.",
+        "button": "Project details"
+    },
+    "join": {
+        "title": "Join",
+        "text": "Aufragen Organizer inspiriert vom Kanban System. Erstelle und Organisiere Aufgaben mit Drag and Drop Funktionen, weisen Sie den Aufgaben Nutzer und Kategorien hinzu.",
+        "button": "Project details"
+    }
+}

@@ -1,0 +1,24 @@
+<div class="mini-project flex-col">
+    <div class="upper-wrap">
+        <div class="bg-img-wrap">
+            <div [ngClass]="hover ? 'hover-zoom' : ''">
+                <img src="img/projects/{{this.bgImg}}" (alt)="this.bgAlt">
+            </div>
+        </div>
+        <div id="hoverWrap" class="hover-wrap" (mouseenter)="this.hover = true" (mouseleave)="this.hover = false"
+            [ngClass]="hover ? 'hover-on' : ''">
+            <div class="btn-right-wrap">
+                <a href="{{this.btnLink}}">
+                    <button class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
+                        (mouseenter)="this.toggleHover()" (mouseleave)="this.toggleHover()">
+                        {{this.btnText}}
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="lower-wrap">
+        <h4>{{this.title}}</h4>
+        <p>{{this.text}}</p>
+    </div>
+</div>
