@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="lower-wrap">
+    <div class="lower-wrap" (click)="this.hover = true; this.animation = false" (mouseleave)="this.hover = false; this.animation = true">
         <h4>{{this.title}}</h4>
         <p>{{this.text}}</p>
     </div>

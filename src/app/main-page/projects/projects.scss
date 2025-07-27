@@ -21,8 +21,24 @@ h5 {
 
 .upper-wrap {
     gap: 48px;
+
+    .text-wrap {
+        flex: 1;
+        min-width: 36%;
+    }
 }
 
 .lower-wrap {
     gap: 48px;
+}
+
+@media (max-width: 780px) {
+    .upper-wrap {
+        flex-direction: column;
+
+    }
+
+    .lower-wrap {
+        flex-direction: column;
+    }
 }

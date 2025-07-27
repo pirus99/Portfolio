@@ -4,7 +4,6 @@
     .upper-wrap {
         position: relative;
 
-
         .bg-img-wrap {
             width: 95%;
             height: 100%;
@@ -20,17 +19,38 @@
                 width: 96%;
                 overflow: hidden;
                 position: relative;
+
+                @media (max-width: 980px) {
+                    height: 260px;
+                }
+                @media (max-width: 800px) {
+                    height: 220px;
+                }
+                @media (max-width: 780px) {
+                    height: 280px;
+                }
+                @media (max-width: 500px) {
+                    height: 240px;
+                }
+                @media (max-width: 430px) {
+                    height: 210px;
+                }
+
             }
 
             img {
                 width: 100%;
                 height: auto;
                 position: absolute;
-                top: 25px;
+                top: 18px;
             }
 
             .animate {
-                animation: float 4s ease-in-out infinite;
+                animation: float 5s ease-in-out infinite;
+
+                @media (max-width: 880px) {
+                    animation: floatSmall 5s ease-in-out infinite;
+                }
             }
 
             @keyframes float {
@@ -47,40 +67,77 @@
                 }
             }
 
-            .sticker {
-                position: absolute;
-                top: 120px;
-                left: 12px;
-                img {
-                    height: 120px;
-                    width: 120px;
+            @keyframes floatSmall {
+                0% {
+                    top: 12px;
+                }
+
+                50% {
+                    top: 32px;
+                }
+
+                100% {
+                    top: 12px;
                 }
             }
         }
 
-        .hover-wrap {
-            opacity: 0;
+        .sticker {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 95%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.144) 70%, rgba(0, 0, 0, 0.548) 90%);
-            border-radius: 18px;
-            transition: opacity 0.3s ease-out;
+            top: 120px;
+            left: 12px;
+            height: 120px;
+            width: 10vw;
 
-            .btn-right-wrap {
-                height: 88%;
-                width: 88%;
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-                justify-content: end;
+            img {
+                height: 100%;
+                width: 100%;
             }
+
+            @media (max-width: 980px) {
+                top: 100px;
+            }
+
+            @media (max-width: 780px) {
+                width: 15vw;
+            }
+
+            @media (max-width: 500px) {
+                width: 20vw;
+            }
+            @media (max-width: 430px) {
+                    top: 80px;
+                    left: 0px;
+            }
+
+
+
         }
     }
 
+    .hover-wrap {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.144) 70%, rgba(0, 0, 0, 0.548) 90%);
+        border-radius: 18px;
+        transition: opacity 0.3s ease-out;
+
+        .btn-right-wrap {
+            height: 88%;
+            width: 88%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+        }
+    }
 }
+
+
 
 .hover-zoom {
     transform: scale(1.12);
@@ -113,3 +170,4 @@ h4 {
     font-size: 24px;
     font-weight: 700;
 }
+

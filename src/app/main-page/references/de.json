@@ -1,0 +1,27 @@
+{
+    "words": "IN IHREN WORTEN:",
+    "title": "Was Kollegen denken",
+    "cards": {
+        "card0": {
+            "name": "Tobias Lange",
+            "job": "Frontend Developer",
+            "linkedIn": "https://linkedin.com",
+            "pic": "A",
+            "comment": "Karl really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+        },
+        "card1": {
+            "name": "Maria Schäfer",
+            "job": "Frontend Developer",
+            "linkedIn": "https://linkedin.com",
+            "pic": "B",
+            "comment": "It was a great pleasure to work with Karl. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+        },
+        "card2": {
+          "name": "David Braun",
+            "job": "Frontend Developer",
+            "linkedIn": "https://linkedin.com",
+            "pic": "A",
+            "comment": "Karl was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals."
+        }
+    }
+}

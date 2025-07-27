@@ -2,12 +2,15 @@
     <div class="content-wrap" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false"
         (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
         <div class="upper-wrap">
-            <div class="title-wrap">
-                <h5>{{this.lang.stack}}</h5>
-                <app-title-cirlce-orange [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-cirlce-orange>
+            <div class="title-mobi-wrap">
+                <div class="title-wrap">
+                    <h5>{{this.lang.stack}}</h5>
+                    <app-title-cirlce-orange [text]="this.lang.title"
+                        [isVisible]="this.isVisible"></app-title-cirlce-orange>
+                </div>
             </div>
             <div class="text-wrap">
-                <img src="img/skills/skills_normal.png" alt="Note Block">
+                <img class="bg-normal" src="img/skills/skills_normal.png" alt="Note Block">
                 <p>{{this.lang.text}}</p>
             </div>
         </div>
@@ -22,20 +25,26 @@
                     </div>
                     }
                 </div>
-                <div class="icon-wrap">
-                    @for (icon of this.iconsRow2; track $index) {
-                    <div class="icon">
-                        <img src="img/skills/icons/{{this.iconsRow2[$index].icon}}"
-                            alt="{{this.iconsRow2[$index].name}}">
-                        <h5>{{this.iconsRow2[$index].name}}</h5>
-                    </div>
-                    }
-                </div>
             </div>
-            <div class="peel-wrap" (mouseenter)="peel='start'; peelHandler();" (mousedown)="peel='end'; peelHandler();">
-                <img id="peelDefault" src="img/skills/peel/default.svg" alt="Click to view also interested in">
-                <img id="peelHover" (mouseleave)="peel='none'; peelHandler();" src="img/skills/peel/variant.svg" alt="Also interested in">
-                <img id="peelOpen"src="img/skills/peel/open.svg" alt="Also interested in Ract Vue.js">
+            <div class="peel-wrap desktop" (mouseenter)="peel='start'; peelHandler();"
+                (mousedown)="peel='end'; peelHandler();">
+                <img class="peel-default" id="peelDefault" src="img/skills/peel/default.svg"
+                    alt="Click to view also interested in">
+                <img class="peel-hover" id="peelHover" (mouseleave)="peel='none'; peelHandler();"
+                    src="img/skills/peel/variant.svg" alt="Also interested in">
+                <img class="peel-open" id="peelOpen" src="img/skills/peel/open.svg"
+                    alt="Also interested in Ract Vue.js">
+            </div>
+        </div>
+        <div class="peel-mobi-container">
+            <div class="peel-wrap mobi" (mouseenter)="peel='start'; peelHandler();"
+                (mousedown)="peel='end'; peelHandler();">
+                <img class="peel-default" id="peelDefaultMobi" src="img/skills/peel/default.svg"
+                    alt="Click to view also interested in">
+                <img class="peel-hover" id="peelHoverMobi" (mouseleave)="peel='none'; peelHandler();"
+                    src="img/skills/peel/variant.svg" alt="Also interested in">
+                <img class="peel-open" id="peelOpenMobi" src="img/skills/peel/open.svg"
+                    alt="Also interested in Ract Vue.js">
             </div>
         </div>
     </div>

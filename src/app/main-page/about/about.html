@@ -1,25 +1,28 @@
-<div class="w-100" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false" (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
+<div class="w-100" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false"
+    (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
     <div class="about-content" id="aboutMe">
         <div class="wrap-left">
-            <div class="wrap-yellow">
-                <img class="yellow-bg bg" src="img/about/Yellow.png" alt="">
-                <div class="img-wrap flex">
-                    <img src="img/about/state-location.svg" alt="Map Marker">
-                    <p>{{this.lang.basedIn}}</p>
+            <div class="flex-col">
+                <div class="wrap-yellow">
+                    <img class="yellow-bg bg" src="img/about/Yellow.png" alt="">
+                    <div class="img-wrap flex">
+                        <img src="img/about/state-location.svg" alt="Map Marker">
+                        <p>{{this.lang.basedIn}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="wrap-blue">
-                <img class="blue-bg bg" src="img/about/Blue.png" alt="">
-                <div class="img-wrap flex">
-                    <img src="img/about/state-relocation.svg" alt="Relocate Icon, two Map Markers">
-                    <p>{{this.lang.relocate}}</p>
+                <div class="wrap-blue">
+                    <img class="blue-bg bg" src="img/about/Blue.png" alt="">
+                    <div class="img-wrap flex">
+                        <img src="img/about/state-relocation.svg" alt="Relocate Icon, two Map Markers">
+                        <p>{{this.lang.relocate}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="wrap-orange">
-                <img class="orange-bg bg" src="img/about/Orange.png" alt="">
-                <div class="img-wrap flex">
-                    <img src="img/about/status-remote.svg" alt="Remote Icon">
-                    <p>{{this.lang.remote}}</p>
+                <div class="wrap-orange">
+                    <img class="orange-bg bg" src="img/about/Orange.png" alt="">
+                    <div class="img-wrap flex">
+                        <img src="img/about/status-remote.svg" alt="Remote Icon">
+                        <p>{{this.lang.remote}}</p>
+                    </div>
                 </div>
             </div>
         </div>

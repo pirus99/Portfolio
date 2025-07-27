@@ -10,7 +10,7 @@
                         <h1 appHighlightLetter class="title-one">{{lang.fullstack}}</h1>
                     </div>
                 </div>
-                <div class="image-border-wrap" (mouseenter)="imageHover=true; colorImage();"
+                <div class="image-border-wrap desktop" (mouseenter)="imageHover=true; colorImage();"
                     (mouseleave)="imageHover=false; colorImage();">
                     <img id="greyImage" src="img/atf/polaroid-frame.png" alt="Picture of Miles">
                     @if (!imageHover) {
@@ -25,8 +25,16 @@
                 <button class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
                     (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">{{lang.getintouch}}</button>
             </div>
+            <div class="image-border-wrap image-border-wrap-mobi mobi">
+                <img src="img/atf/polaroid-frame.png" alt="Picture of Miles">
+                @if (!imageHover) {
+                <p>Miles :)</p>
+                } @else {
+                <p>Miles :D</p>
+                }
+            </div>
         </div>
-        <div class="social-wrap w-90 mw-1440px flex">
+        <div class="social-wrap w-90 mw-1440px flex desktop">
             <div class="flex-col">
                 <a href="https://linkedin.com"><img class="soc-img" src="img/social/linked-in.svg"
                         alt="Contact Linked In"></a>

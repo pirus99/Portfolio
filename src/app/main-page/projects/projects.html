@@ -1,9 +1,10 @@
 <div class="w-100 mb-144 mt-144" (mouseenter)="isVisible = true" (mouseleave)="isVisible = false">
-    <div class="project-wrap flex-col">
+    <div class="project-wrap flex-col" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false"
+        (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
         <div class="upper-wrap flex">
             <div class="text-wrap flex-col">
                 <div class="title-wrap">
-                    <div class="flex-end">
+                    <div class="">
                         <h5>{{this.lang.craft}}</h5>
                     </div>
                     <app-title-line-yellow [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-line-yellow>

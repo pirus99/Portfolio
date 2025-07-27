@@ -42,6 +42,13 @@ export class Skills {
     { name: 'Angular', icon: 'Angular.svg' },
     { name: 'Firebase', icon: 'Firebase.svg' },
     { name: 'Git', icon: 'Git.svg' },
+    { name: 'Rest-Api', icon: 'Rest-Api.svg' },
+    { name: 'Material-Design', icon: 'Material-Design.svg' },
+    { name: 'Python', icon: 'Python.svg' },
+    { name: 'Linux', icon: 'Linux.svg' },
+    { name: 'Docker', icon: 'Docker.svg' },
+    { name: 'SQL', icon: 'SQL.svg' },
+    { name: 'Shell Scripting', icon: 'Shell-Scripting.svg' },
   ];
 
   iconsRow2 = [
@@ -60,6 +67,12 @@ export class Skills {
   peelTrig = false;
 
   peelHandler() {
+    this.peelDesk();
+    this.peelMobi();
+
+  }
+
+  peelDesk() {
     if (this.peel === 'none' && !this.peelTrig) {
       const peelDefault = document.getElementById('peelDefault');
       if (peelDefault) {
@@ -79,6 +92,30 @@ export class Skills {
         peelHover.style.zIndex = '4';
         this.peelTrig = true;
       }
+    }
+  }
+
+  peelMobi() {
+    if (this.peel === 'none' && !this.peelTrig) {
+      const peelDefault = document.getElementById('peelDefaultMobi');
+      if (peelDefault) {
+        peelDefault.style.opacity = '1';
+        peelDefault.style.zIndex = '10';
+      }
+    } else {
+      const peelDefault = document.getElementById('peelDefaultMobi');
+      if (peelDefault) {
+        peelDefault.style.opacity = '0';
+        peelDefault.style.zIndex = '4';
+      }
+      setTimeout(() => {
+        const peelHover = document.getElementById('peelHoverMobi');
+        if (peelHover) {
+          peelHover.style.opacity = '0';
+          peelHover.style.zIndex = '4';
+          this.peelTrig = true;
+        }
+      }, 100);
     }
   }
 }

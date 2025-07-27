@@ -1,0 +1,22 @@
+<div class="card-wrap">
+    <div class="card-content">
+        <img class="bg" src="img/references/{{this.image}}.png" alt="Card Background">
+        <img class="bg op" src="img/references/Hover.png" alt="Hover Background" [ngClass]="{hovimg: isVisible}">
+        <div class="card-text-wrap">
+            <div class="card-text w-90">
+                <p>{{this.text}}</p>
+            </div>
+            <div class="card-lower">
+                <div>
+                    <h5>{{this.name}}</h5>
+                    <h6>{{this.job}}</h6>
+                </div>
+                <div class="flex in-wrap">
+                    <img src="img/references/linked-in.svg" alt="">
+                    <p>Profile</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

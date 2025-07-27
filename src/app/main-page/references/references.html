@@ -1,0 +1,48 @@
+<div class="w-100">
+    <div class="content-wrap flex-col" (mouseenter)="isVisible = true;" (mouseleave)="isVisible = false;">
+        <div class="upper-wrap">
+            <div class="title-wrap">
+                <div class="flex upper-title">
+                    <div>
+                        <div class="arrow-animation">
+                            <div class="white-cover" [ngClass]="{hover: isVisible}"></div>
+                            <img src="img/references/blue-arrow.svg" alt="blue Arrow">
+                        </div>
+                    </div>
+                    <h5>{{this.lang.words}}</h5>
+                </div>
+                <div class="lower-title">
+                    <h2>{{this.lang.title}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="lower-wrap desktop">
+            <app-card [text]="this.lang.cards.card0.comment" [name]="this.lang.cards.card0.name" 
+            [job]="this.lang.cards.card0.job" [link]="this.lang.cards.card0.linkedIn"
+            [image]="this.lang.cards.card0.pic" [isVisible]="card0Hov" (mouseenter)="card0Hov = true" (mouseleave)="card0Hov = false" [ngClass]="{zcard: card0Hov}"
+            class="ref1"></app-card>
+            <app-card [text]="this.lang.cards.card1.comment" [name]="this.lang.cards.card1.name" 
+            [job]="this.lang.cards.card1.job" [link]="this.lang.cards.card1.linkedIn"
+            [image]="this.lang.cards.card1.pic" [isVisible]="card1Hov" (mouseenter)="card1Hov = true" (mouseleave)="card1Hov = false" [ngClass]="{zcard: card1Hov}"
+            class="ref2"></app-card>
+            <app-card [text]="this.lang.cards.card2.comment" [name]="this.lang.cards.card2.name" 
+            [job]="this.lang.cards.card2.job" [link]="this.lang.cards.card2.linkedIn"
+            [image]="this.lang.cards.card2.pic" [isVisible]="card2Hov" (mouseenter)="card2Hov = true" (mouseleave)="card2Hov = false" [ngClass]="{zcard: card2Hov}"
+            class="ref3"></app-card>
+        </div>
+        <div class="lower-wrap mobi">
+            <app-mobi-card [text]="this.lang.cards.card0.comment" [name]="this.lang.cards.card0.name" 
+            [job]="this.lang.cards.card0.job" [link]="this.lang.cards.card0.linkedIn"
+            [image]="this.lang.cards.card0.pic" [isVisible]="card0Hov" (mouseenter)="card0Hov = true" (mouseleave)="card0Hov = false" [ngClass]="{zcard: card0Hov}"
+            class="ref1"></app-mobi-card>
+            <app-mobi-card [text]="this.lang.cards.card1.comment" [name]="this.lang.cards.card1.name" 
+            [job]="this.lang.cards.card1.job" [link]="this.lang.cards.card1.linkedIn"
+            [image]="this.lang.cards.card1.pic" [isVisible]="card1Hov" (mouseenter)="card1Hov = true" (mouseleave)="card1Hov = false" [ngClass]="{zcard: card1Hov}"
+            class="ref2"></app-mobi-card>
+            <app-mobi-card [text]="this.lang.cards.card2.comment" [name]="this.lang.cards.card2.name" 
+            [job]="this.lang.cards.card2.job" [link]="this.lang.cards.card2.linkedIn"
+            [image]="this.lang.cards.card2.pic" [isVisible]="card2Hov" (mouseenter)="card2Hov = true" (mouseleave)="card2Hov = false" [ngClass]="{zcard: card2Hov}"
+            class="ref3"></app-mobi-card>
+        </div>
+    </div>
+</div>

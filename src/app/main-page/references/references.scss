@@ -1,0 +1,139 @@
+.content-wrap {
+    width: 85%;
+    max-width: 1250px;
+    margin: auto;
+
+    .title-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        .upper-title {
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    .arrow-animation {
+        position: relative;
+        width: 100%;
+        transition: width 0.4s ease-in-out;
+
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 38px;
+            width: 120px;
+        }
+
+        .white-cover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 38px;
+            background-color: white;
+            z-index: 10;
+            transform: translateX(0px);
+            transition: transform 0.4s ease-in-out;
+        }
+    }
+
+    .hover {
+        transform: translateX(-130px) !important;
+        transition: transform 0.4s ease-in-out !important;
+    }
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 64px;
+    font-weight: 700;
+    word-break: keep-all;
+
+    @media (max-width: 385px) {
+        font-size: 52px;
+    }
+}
+
+.lower-wrap {
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    padding-bottom: 64px;
+
+
+    .ref1 {
+        rotate: -4deg !important;
+        width: 50%;
+        margin-left: 0px;
+        margin-right: -200px;
+        z-index: 3;
+    }
+
+    .ref2 {
+        margin-top: 24px;
+        rotate: 1deg !important;
+        width: 50%;
+        z-index: 2;
+
+        @media (max-width: 1210px) {
+            margin-left: 96px;
+        }
+    }
+
+    .ref3 {
+        rotate: 5deg !important;
+        width: 50%;
+        margin-left: -80px;
+        z-index: 1;
+    }
+
+    .zcard {
+        z-index: 10;
+    }
+}
+
+.mobi {
+    display: none;
+}
+
+@media (max-width: 1210px) {
+    .desktop {
+        display: none !important;
+    }
+
+    .mobi {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .lower-wrap {
+        flex-direction: column;
+
+        .ref1 {
+            width: 80%;
+            margin: auto !important;
+        }
+
+        .ref2 {
+            width: 80%;
+            margin: auto !important;
+        }
+
+        .ref3 {
+            rotate: -2deg !important;
+            width: 80%;
+            margin: auto !important;
+        }
+    }
+}

@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="lower-wrap">
+    <div class="lower-wrap" (click)="this.hover = true" (mouseleave)="this.hover = false">
         <h4>{{this.title}}</h4>
         <p>{{this.text}}</p>
     </div>

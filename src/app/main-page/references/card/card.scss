@@ -1,0 +1,87 @@
+.card-wrap {
+    position: relative;
+    min-height: 210px;
+    max-height: 420px;
+    min-width: 340px;
+    max-width: 550px;
+    aspect-ratio: 3/2;
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .op {
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .hovimg {
+        opacity: 0.7;
+        transition: opacity 0.15s ease-in;
+    }
+
+    .card-text-wrap {
+        position: absolute;
+        top: 40px;
+        left: 16px;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .card-text {
+            margin-left: auto;
+            margin-right: auto;
+            height: 72%;
+
+            @media (max-width: 1260px) {
+                max-height: 60%;
+            }
+
+            @media (max-width: 1180px) {
+                max-height: 55%;
+            }
+
+            p {
+                max-height: 75%;
+                overflow: scroll;
+                scrollbar-width: none;
+
+
+            }
+        }
+    }
+
+    .card-lower {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        h5 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0px;
+            margin-bottom: 12px;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 0;
+        }
+    }
+
+    .in-wrap {
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+    }
+}
