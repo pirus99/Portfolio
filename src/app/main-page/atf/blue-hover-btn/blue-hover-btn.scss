@@ -9,6 +9,9 @@
     overflow: hidden;
     background-color: transparent;
     transition: all 0.4s ease-in-out;
+    @media (max-width: 696px) {
+        background-color: #4c67eb;
+    }
 }
 
 .hover-blue::before {

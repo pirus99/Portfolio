@@ -5,6 +5,7 @@
     margin: auto;
     padding-top: 144px;
     padding-bottom: 166px;
+    overflow: hidden;
 
     @media (max-width: 1050px) {
         margin: 0 24px;
@@ -230,3 +231,6 @@
     }
 }
 
+a {
+    text-decoration: none;
+}

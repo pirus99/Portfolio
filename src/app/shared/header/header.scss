@@ -12,7 +12,6 @@
         margin: auto;
         margin-top: 16px;
 
-
         img {
             height: 56px;
         }
@@ -127,3 +126,181 @@ input:checked+.slider:before {
     display: none;
 }
 
+
+#burgerMenu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 8px;
+    overflow: visible;
+    position: relative;
+    z-index: 101;
+
+    &:hover {
+        color: #3355ff !important;
+    }
+
+    // THE LINES
+    span,
+    span:before,
+    span:after {
+        background: #fff;
+        display: block;
+        height: 2px;
+        opacity: 1;
+        position: absolute;
+        transition: 0.3s ease-in-out;
+
+    }
+
+    span:before,
+    span:after {
+        content: '';
+    }
+
+    // TOP
+    span:before {
+        left: 0px;
+        top: -10px;
+        width: 27px;
+    }
+
+    // MIDDLE
+    span {
+        right: 0px;
+        top: 13px;
+        width: 27px;
+    }
+
+    // BOTTOM
+    span:after {
+        left: 0px;
+        top: 10px;
+        width: 27px;
+    }
+
+    // ROTATION ON CLICK
+    &.close {
+
+        // TOP
+        span:before {
+            top: 0px;
+            transform: rotate(90deg);
+            width: 27px;
+        }
+
+        // MIDDLE
+        span {
+            transform: rotate(-45deg);
+            top: 13px;
+            width: 27px;
+        }
+
+        // BOTTOM
+        span:after {
+            top: 0px;
+            left: 0;
+            transform: rotate(90deg);
+            opacity: 0;
+            width: 0;
+        }
+    }
+}
+
+#mobileMenu {
+    z-index: 100;
+    width: 100vw;
+    min-height: 90%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+
+    &.overlay {
+        visibility: visible;
+        opacity: 1;
+        padding-top: 100px;
+        background: rgba(0, 0, 0, 0.5);
+        background-image: url(../../../../public/background/atf-bg.png);
+        background-position: bottom;
+        height: 80vh !important;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        color: #fff;
+        display: block;
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-decoration: none;
+    }
+}
+
+.header {
+    img {
+        z-index: 250;
+    }
+}
+
+.social-wrap {
+    align-items: center;
+    justify-content: center;
+
+    a {
+        margin: 12px;
+        margin-top: 48px;
+
+        .soc-img {
+            border-radius: 50%;
+            background-color: transparent;
+            transition: background-color 0.3s ease-in, ;
+
+            &:hover {
+                background-color: #4c67eb;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+#mobileMenu {
+    .lang-switcher {
+        margin-top: 48px;
+        display: flex;
+        align-items: center;
+
+        a {
+            margin: 8px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    }
+}
+
+.mobile {
+    display: none !important;
+}
+
+@media (max-width: 696px) {
+    .desktop {
+        display: none !important;
+    }
+
+    .mobile {
+        display: flex !important;
+    }
+}

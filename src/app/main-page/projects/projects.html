@@ -1,7 +1,7 @@
 <div class="w-100 mb-144 mt-144" (mouseenter)="isVisible = true" (mouseleave)="isVisible = false">
     <div class="project-wrap flex-col" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false"
         (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
-        <div class="upper-wrap flex">
+        <div class="upper-wrap flex" id="projects">
             <div class="text-wrap flex-col">
                 <div class="title-wrap">
                     <div class="">
@@ -24,7 +24,6 @@
             <app-normal-project [title]="this.lang.bubble.title" [btnText]="this.lang.bubble.button" [btnLink]="'/da-bubble'"
                 [text]="this.lang.bubble.text" [bgImg]="'DABubble.svg'" [bgAlt]="this.lang.bubble.title">
             </app-normal-project>
-
         </div>
     </div>
 </div>

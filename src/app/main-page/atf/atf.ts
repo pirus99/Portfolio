@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { buttonHoverAnimation } from '../animation-module';
 import { LangService } from '../../lang-service';
 import { App } from '../../app';

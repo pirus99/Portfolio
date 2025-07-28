@@ -1,0 +1,16 @@
+{
+    "contact": "Kontakt",
+    "title": "Bereit um zusammen zu Arbeiten ?",
+    "text": "Bitte Kontaktieren Sie mich gern über mein Formular, ich würde mich freuen das Entwicklungstoolset in Ihrem Projekt zu erweitern. Aufgrund meiner angewohnheit meine Fähigkeiten stetig verbessern zu wollen und anders zu denken könnte Ich ein wertvoller Teil Ihres Tems werden!",
+    "smallText": "Gerne möchte ich mit meinen Software entwicklungs kenntnissen zu Ihrem Projekt beitragen! ",
+    "form": {
+        "name": ["Wie ist Ihr Name?", "Ihr Name sollte hier stehen", "Oops! sieht so aus als würde der Name fehlen"],
+        "email": ["Wie ist Ihre E-Mail?", "Ihre-email@email.com", "Hoppala! Ihre email wird benötigt"],
+        "subject": ["Wie kann ich Helfen?", "Hallo Miles, ich bin Interressiert an...", "Was möchten Sie entwickeln ?"]
+    },
+    "have": "Ich habe die ",
+    "policy": "Datenschutzerklärung ",
+    "read": "gelesen und Stimme der verarbeitung meiner Daten zu.",
+    "button": "Senden",
+    "sent": "Nachricht versendet!"
+}

@@ -1,0 +1,16 @@
+{
+    "contact": "CONTACT ME",
+    "title": "Ready to work together ?",
+    "text": "Please feel free to Contact me via the Form, i would love to empower the Development toolset in your Project! Because of my ability in improving my Skills and think in Different ways, i could be a good part of your Team!",
+    "smallText": "I would love contributing my knowledge in Development to your Project!",
+    "form": {
+        "name": ["What's your name?", "Your name goes here", "Oops! it seems your name is missing"],
+        "email": ["What's your email?", "Your-email@email.com", "Hoppala! your email is required"],
+        "subject": ["How can I help you?", "Hello Miles, i'am Interested in...", "What do you need to Develop?"]
+    },
+    "have": "I've read the ",
+    "policy": "privacy policy ",
+    "read": "and agree to the processing of my data as outlined",
+    "button": "Send",
+    "sent": "Message sent!"
+}

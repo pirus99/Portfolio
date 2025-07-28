@@ -1,5 +1,47 @@
 <div class="head-wrap">
-    <nav class="header">
+    <nav class="header mobile">
+        <img src="logo-mp.png" alt="Logo">
+        <div id="burgerMenu" (click)="toggleBurgerMenu()">
+            <span></span>
+        </div>
+    </nav>
+    <div id="mobileMenu">
+        <ul>
+            <li><app-btn-clear-circle (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle></li>
+            <li><app-btn-clear-line-straight (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
+            </li>
+            <li><app-btn-clear-line-wave (click)="toggleBurgerMenu()" [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
+            </li>
+            <li><app-btn-clear-line-z (click)="toggleBurgerMenu()" [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z></li>
+            <li>
+                <div class="lang-switcher" id="langSwitcher">
+                    <div class="hover-wrap {{langENclasses}}">
+                        <a id="langEN" (click)="setLangEN()" onclick="langSwitchMobi.checked = false" class="EN">EN</a>
+                    </div>
+                    <label class="switch">
+                        <input id="langSwitchMobi" type="checkbox" (change)="toggleLanguage();" />
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="hover-wrap {{langDEclasses}}">
+                        <a id="langDE" (click)="setLangDE();" onclick="langSwitchMobi.checked = true" class="DE">DE</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="social-wrap w-90 flex">
+                    <div class="flex">
+                        <a href="https://linkedin.com"><img class="soc-img" src="img/social/linked-in.svg"
+                                alt="Contact Linked In"></a>
+                        <a href="https://github.com/pirus99"><img class="soc-img" src="img/social/git-hub.svg"
+                                alt="View Github"></a>
+                        <a href="mailto:Miles.Pickull@gmx.de"><img class="soc-img" src="img/social/mail.svg"
+                                alt="Contact Mail"></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <nav class="header desktop">
         <img src="logo-mp.png" alt="Logo">
         <app-btn-clear-circle [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle>
         <app-btn-clear-line-straight [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
@@ -7,17 +49,21 @@
         <app-btn-clear-line-z [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z>
         <div class="lang-switcher" id="langSwitcher">
             <div class="hover-wrap {{langENclasses}}">
-                <a id="langEN" (click)="setLangEN()" onclick="langSwitch.checked = false" class="EN" onmouseenter="imgHoverEN.classList.remove('d-none')" onmouseleave="imgHoverEN.classList.add('d-none')">EN</a>
+                <a id="langEN" (click)="setLangEN()" onclick="langSwitch.checked = false" class="EN"
+                    onmouseenter="imgHoverEN.classList.remove('d-none')"
+                    onmouseleave="imgHoverEN.classList.add('d-none')">EN</a>
                 <div id='imgHoverEN' class="img-hover d-none">
                     <img src="img/design/buttons/hover-lang.svg" alt="hover image language">
                 </div>
             </div>
             <label class="switch">
-                <input id="langSwitch" type="checkbox" (change)="toggleLanguage();"/>
+                <input id="langSwitch" type="checkbox" (change)="toggleLanguage();" />
                 <span class="slider round"></span>
             </label>
             <div class="hover-wrap {{langDEclasses}}">
-                <a id="langDE" (click)="setLangDE();" onclick="langSwitch.checked = true" class="DE" onmouseenter="imgHoverDE.classList.remove('d-none');" onmouseleave="imgHoverDE.classList.add('d-none')">DE</a>
+                <a id="langDE" (click)="setLangDE();" onclick="langSwitch.checked = true" class="DE"
+                    onmouseenter="imgHoverDE.classList.remove('d-none');"
+                    onmouseleave="imgHoverDE.classList.add('d-none')">DE</a>
                 <div id='imgHoverDE' class="img-hover d-none">
                     <img src="img/design/buttons/hover-lang.svg" alt="hover image language">
                 </div>

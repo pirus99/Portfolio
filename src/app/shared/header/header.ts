@@ -47,7 +47,6 @@ export class Header {
     this.langService.ClickEvent('')
     this.langENclasses = '';
     this.langDEclasses = 'active';
-    
   }
 
   setLangEN() {
@@ -71,4 +70,14 @@ export class Header {
   }
 
 
+
+  toggleBurgerMenu() {
+    let burgerMenu = document.getElementById('burgerMenu');
+    let overlay = document.getElementById('mobileMenu');
+
+    if (burgerMenu) {
+      burgerMenu.classList.toggle("close");
+      overlay?.classList.toggle("overlay");
+    }
+  }
 }

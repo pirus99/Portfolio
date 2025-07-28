@@ -49,6 +49,9 @@ export class BlueHoverBtn implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.updateWidth();
+    if (window.innerWidth < 696){
+      this.onMouseEnter();
+    }
   }
 
   onMouseEnter() {

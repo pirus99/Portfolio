@@ -5,8 +5,13 @@
         width: 85%;
         max-width: 1360px;
         margin: auto;
-        background-color: rgb(82, 66, 66);
+        background-color: transparent;
         padding-bottom: 80px;
+
+        @media (max-width: 540px) {
+            padding-bottom: 180px;
+        }
+
 
         .foot-title {
             img {
@@ -15,6 +20,7 @@
 
             p {
                 margin: 0;
+                color: white
             }
         }
 
@@ -27,6 +33,10 @@
             align-items: end;
             padding-bottom: 20px;
 
+            @media (max-width: 660px) {
+                flex-wrap: wrap;
+            }
+
             a {
                 text-decoration: none;
                 color: #F8F9FA;
@@ -34,6 +44,6 @@
         }
     }
 
-app-btn-clear-line-z {
-    margin-top: 4px;
-}
+    app-btn-clear-line-z {
+        margin-top: 4px;
+    }

@@ -1,0 +1,66 @@
+<div class="w-100 bg">
+    <div class="flex contact-wrap" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false"
+        (click)="this.isVisible = true" (pointerenter)="this.isVisible=true">
+        <div class="left-wrap" id="contact">
+            <h5>{{this.lang.contact}}</h5>
+            <h2>{{this.lang.title}}</h2>
+            <p>{{this.lang.text}}</p>
+            <p>{{this.lang.smallText}}</p>
+            <div class="flex w-100 center desktop">
+                <div class="img-wrap">
+                    <div class="img" [ngClass]="{animate: isVisible}">
+                        <img src="img/design/curved-arrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-wrap">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div class="top">
+                    <div class="field-wrap">
+                        <label for="name">{{this.lang.form.name[0]}}</label>
+                        <input [(ngModel)]="contactData.name" type="text" class="txt-input" name="name" id="name"
+                            placeholder={{this.lang.form.name[1]}} required>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="field-wrap">
+                        <label for="email">{{this.lang.form.email[0]}}</label>
+                        <input [(ngModel)]="contactData.email" type="text" class="txt-input" name="email" id="email"
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                            placeholder={{this.lang.form.email[1]}} required>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="field-wrap">
+                        <label for="subject">{{this.lang.form.subject[0]}}</label>
+                        <input #subject="ngModel" minlength="3" [(ngModel)]="contactData.subject" type="text"
+                            class="txt-input" name="subject" id="subject" placeholder={{this.lang.form.subject[1]}}
+                            required>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="policy" id="policy" class="custom-checkbox" required="true">
+                    <label [(ngModel)]="contactData.box" for="policy">{{this.lang.have}}<a
+                            href="privacy-policy">{{this.lang.policy}}</a>{{this.lang.read}}</label>
+                </div>
+
+                <div class="btn-wrap">
+                    <div class="flex w-100 center mobi">
+                        <div class="img-wrap">
+                            <div class="img" [ngClass]="{animate: isVisible}">
+                                <img src="img/design/curved-arrow.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
+                        value={{this.lang.button}} (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">
+                </div>
+                <div id="sentMessage" class="sent-message">
+                    <p>{{this.lang.sent}}</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

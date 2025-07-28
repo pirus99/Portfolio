@@ -19,6 +19,9 @@
                 width: 0;
                 overflow: hidden;
                 transition: width 0.2s ease-in;
+                @media (max-width: 696px) {
+                    left: -54px;
+                }
 
                 img {
                     height: 40px;
