@@ -37,11 +37,11 @@
             </div>
         </div>
         <div class="peel-mobi-container">
-            <div class="peel-wrap mobi" (mouseenter)="peel='start'; peelHandler();"
-                (mousedown)="peel='end'; peelHandler();">
+            <div class="peel-wrap mobi" (mouseenter)="peelMobile='start'; peelHandler();"
+                (mousedown)="peelMobile='end'; peelHandler();">
                 <img class="peel-default" id="peelDefaultMobi" src="img/skills/peel/default.svg"
                     alt="Click to view also interested in">
-                <img class="peel-hover" id="peelHoverMobi" (mouseleave)="peel='none'; peelHandler();"
+                <img class="peel-hover" id="peelHoverMobi" (mouseleave)="peelMobile='none'; peelHandler();"
                     src="img/skills/peel/variant.svg" alt="Also interested in">
                 <img class="peel-open" id="peelOpenMobi" src="img/skills/peel/open.svg"
                     alt="Also interested in Ract Vue.js">

@@ -63,13 +63,13 @@ export class Skills {
 
   isVisible = false;
 
+  peelMobile = 'none';
   peel = 'none';
   peelTrig = false;
 
   peelHandler() {
     this.peelDesk();
     this.peelMobi();
-
   }
 
   peelDesk() {
@@ -96,7 +96,7 @@ export class Skills {
   }
 
   peelMobi() {
-    if (this.peel === 'none' && !this.peelTrig) {
+    if (this.peelMobile === 'none' && !this.peelTrig) {
       const peelDefault = document.getElementById('peelDefaultMobi');
       if (peelDefault) {
         peelDefault.style.opacity = '1';

@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="right-wrap">
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" name="contact">
                 <div class="top">
                     <div class="field-wrap">
                         <label for="name">{{this.lang.form.name[0]}}</label>
@@ -40,9 +40,8 @@
                     </div>
                 </div>
                 <div class="checkbox">
-                    <input type="checkbox" name="policy" id="policy" class="custom-checkbox" required="true">
-                    <label [(ngModel)]="contactData.box" for="policy">{{this.lang.have}}<a
-                            href="privacy-policy">{{this.lang.policy}}</a>{{this.lang.read}}</label>
+                    <input [(ngModel)]="contactData.box" for="policy" type="checkbox" name="policy" id="policy" class="custom-checkbox" required="true">
+                    <label>{{this.lang.have}}<a href="privacy-policy">{{this.lang.policy}}</a>{{this.lang.read}}</label>
                 </div>
 
                 <div class="btn-wrap">
