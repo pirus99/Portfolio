@@ -14,13 +14,15 @@
     background-repeat: no-repeat;
     background-image: url(../../../../public/background/skills.png);
 
-
+    @media (max-width: 430px) {
+        height: 30vh;
+    }
 }
 
 .legal-wrapper {
     width: 80%;
     margin: auto;
-    padding-top: 160px;
+    padding-top: 48px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -31,6 +33,10 @@
     width: 80%;
     margin: auto;
     margin-bottom: 120px;
+    
+    @media (max-width: 430px) {
+        margin-bottom: 64px;
+    }
 }
 
 .text-wrapper {
