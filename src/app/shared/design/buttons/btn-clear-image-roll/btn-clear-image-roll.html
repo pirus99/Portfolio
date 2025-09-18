@@ -5,5 +5,5 @@
     </div>
 </div>
 <div class="button-wrap mini-blue-hover" (mouseenter)="this.hover=true" (mouseleave)="this.hover=false">
-    <a href="{{this.link}}">{{this.text}}</a>
+    <a [ngStyle]="{'color': this.textColor}" href="{{this.link}}">{{this.text}}</a>
 </div>
