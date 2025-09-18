@@ -1,6 +1,6 @@
 <div class="head-wrap">
     <nav class="header mobile">
-        <img src="logo-mp.png" alt="Logo">
+        <img src="logo-mp.png" alt="Logo" (click)="this.router.navigate([''])">
         <div id="burgerMenu" (click)="toggleBurgerMenu()">
             <span></span>
         </div>
@@ -42,7 +42,7 @@
         </ul>
     </div>
     <nav class="header desktop">
-        <img src="logo-mp.png" alt="Logo">
+        <img src="logo-mp.png" alt="Logo" (click)="this.router.navigate([''])">
         <app-btn-clear-circle [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle>
         <app-btn-clear-line-straight [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
         <app-btn-clear-line-wave [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>

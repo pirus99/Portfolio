@@ -9,6 +9,7 @@ import { BtnClearLineZ } from '../design/buttons/btn-clear-line-z/btn-clear-line
 import * as langDE from './de.json';
 import * as langEN from './en.json';
 import { LangService } from '../../lang-service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,8 +19,7 @@ import { LangService } from '../../lang-service';
     BtnClearCircle,
     BtnClearLineStraight,
     BtnClearLineWave,
-    BtnClearLineZ,
-  ],
+    BtnClearLineZ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
@@ -33,7 +33,7 @@ export class Header {
   langENclasses = 'active';
   langDEclasses = '';
 
-  constructor(private langService: LangService) { }
+  constructor(private langService: LangService, public router: Router) { }
 
   toggleLanguage() {
     App.toggleLanguage();

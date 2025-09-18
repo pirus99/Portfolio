@@ -12,6 +12,7 @@ export class TitleLineBlue {
 
   @Input() text: string = '';
   @Input() link: string = '';
+  @Input() textColor: string = '';
   @Input() isVisible: boolean = false;
 
   @HostBinding('style.--img-wrap-width') imgWrapWidth = '0px';

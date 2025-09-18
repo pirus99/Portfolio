@@ -12,6 +12,7 @@ export class BtnClearImageRoll {
 
   @Input() text: string = '';
   @Input() link: string = '';
+  @Input() textColor: string = '';
   @Input() image: string = '';
 
   constructor() {}

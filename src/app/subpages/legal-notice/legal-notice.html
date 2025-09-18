@@ -1,1 +1,26 @@
-<p>legal-notice works!</p>
+<div class="page-wrapper">
+    <div class="bg-wrapper">
+        <div class="title-wrapper">
+            <app-title-line-blue [text]="this.lang.title" [textColor]="'white'" [isVisible]="this.isVisible"></app-title-line-blue>
+        </div>
+    </div>
+    <div class="legal-wrapper" (pointerenter)="isVisible = true" (pointerleave)="isVisible = false">
+        <div class="text-wrapper">
+            <h2>{{ this.lang.subTitle1 }}</h2>
+            <p class="m-0">{{ this.lang.text1Name }}</p>
+            <p class="m-0">{{ this.lang.text1Address }}</p>
+            <p class="m-0">{{ this.lang.text1Email }}</p>
+            <h2>{{ this.lang.subTitle2 }}</h2>
+            <p>{{ this.lang.text2 }}</p>
+            <h2>{{ this.lang.subTitle3 }}</h2>
+            <p>{{ this.lang.text3 }}</p>
+            <h2>{{ this.lang.subTitle4 }}</h2>
+            <p>{{ this.lang.text4 }}</p>
+            <h2>{{ this.lang.subTitle5}}</h2>
+            <p>{{ this.lang.text5 }}</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <app-footer [textColor]="'black'"></app-footer>
+</footer>
