@@ -1,6 +1,6 @@
 <div class="image-wrap">
     <div class="icon-wrap"
-        [ngStyle]="{transform: hover ? 'translateX(' + iconShift + 'px) rotate(360deg)' : 'translateX(-50px) rotate(0deg)', opacity: hover ? '1' : '0'}">
+        [ngStyle]="{transform: hover ? 'translateX(' + iconShift + 'px) rotate(360deg)' : 'translateX(-50px) rotate(0deg)', opacity: hover ? '1' : '0', filter: textColor === 'black' ? 'invert(100%)' : 'none'}">
         <img src="{{this.image}}" alt="" />
     </div>
 </div>
