@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { App } from '../../app';
+import { Footer } from '../../shared/footer/footer';
 import { TitleLineBlue } from '../../shared/design/titles/title-line-blue/title-line-blue';
 import { LangService } from '../../lang-service';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
 @Component({
   selector: 'app-legal-notice',
-  imports: [TitleLineBlue],
+  imports: [TitleLineBlue, Footer],
   templateUrl: './legal-notice.html',
   styleUrl: './legal-notice.scss'
 })

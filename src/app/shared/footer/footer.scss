@@ -26,12 +26,12 @@
 
         nav {
             position: absolute;
-            top: 60px;
+            top: 80px;
             width: 95%;
             display: flex;
             justify-content: space-between;
             align-items: end;
-            padding-bottom: 20px;
+            margin-bottom: 40px;
 
             @media (max-width: 660px) {
                 flex-wrap: wrap;
