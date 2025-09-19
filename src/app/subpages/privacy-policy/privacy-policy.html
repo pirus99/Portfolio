@@ -1,0 +1,36 @@
+<div class="page-wrapper">
+    <div class="bg-wrapper">
+        <div class="title-wrapper">
+            <app-title-line-blue [text]="this.lang.title" [textColor]="'white'" [isVisible]="this.isVisible"></app-title-line-blue>
+        </div>
+    </div>
+    <div class="privacy-wrapper" (pointerenter)="isVisible = true" (pointerleave)="isVisible = false">
+        <div class="text-wrapper">
+            <h2>{{ this.lang.subTitle1 }}</h2>
+            <p>{{ this.lang.text1 }}</p>
+            <h2>{{ this.lang.subTitle2 }}</h2>
+            <p class="m-0">{{ this.lang.text2Name }}</p>
+            <p class="m-0">{{ this.lang.text2Address }}</p>
+            <p class="m-0">{{ this.lang.text2Email }}</p>
+            <h2>{{ this.lang.subTitle3 }}</h2>
+            <p>{{ this.lang.text3 }}</p>
+            <h2>{{ this.lang.subTitle4 }}</h2>
+            <p>{{ this.lang.text4 }}</p>
+            <h2>{{ this.lang.subTitle5 }}</h2>
+            <p>{{ this.lang.text5 }}</p>
+            <h2>{{ this.lang.subTitle6 }}</h2>
+            <p>{{ this.lang.text6 }}</p>
+            <h2>{{ this.lang.subTitle7 }}</h2>
+            <p>{{ this.lang.text7 }}</p>
+            <h2>{{ this.lang.subTitle8 }}</h2>
+            <p>{{ this.lang.text8 }}</p>
+            <h2>{{ this.lang.subTitle9 }}</h2>
+            <p>{{ this.lang.text9 }}</p>
+            <h2>{{ this.lang.subTitle10 }}</h2>
+            <p>{{ this.lang.text10 }}</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <app-footer [textColor]="'black'"></app-footer>
+</footer>
