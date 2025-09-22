@@ -11,4 +11,92 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minimal-btn {
+    position: absolute;
+    top: 24px;
+    left: -36px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Bricolage;
+    transform: scale(1.0);
+    transition: transform 0.3s ease;
+
+    &.next-button {
+        position: absolute;
+        top: auto;
+        bottom: -24px;
+        left: auto;
+        right: -36px;
+        color: white;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+}
+
+.content-wrapper {
+    position: relative;
+    height: 72%;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+    align-items: start;
+    margin: auto;
+
+    .btn {
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 16px;
+        padding: 8px 16px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: Bricolage;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 16px;
+    }
+
+    .right-wrapper {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 30px;
+
+        img {
+            border-radius: 24px;
+        }
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: end;
+        gap: 24px;
+    }
 }

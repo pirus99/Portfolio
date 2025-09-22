@@ -2,11 +2,11 @@
     <div class="bg-wrapper">
         <div class="content-wrapper">
             <div class="left-wrapper">
-                <button class="back-button">&#8592; Go Back</button>
+                <button class="back-button minimal-btn"><img src="projects/Back.svg" alt="go Back">Go Back</button>
 
                 <div class="left-content">
                     <div class="title">
-                        <h1>Project Title</h1>
+                        <app-title-line-blue [text]="'Join - MMC'"></app-title-line-blue>
                     </div>
                     <div class="description">
                         <h2>Description</h2>
@@ -27,12 +27,17 @@
             </div>
             <div class="right-wrapper">
                 <div class="image-container">
-
+                    <img src="projects/join.svg" alt="Project Image">
                 </div>
                 <div class="button-wrapper">
-
+                    <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation1 ? 'hover' : 'normal'"
+                        (mouseenter)="standardHoverAnimation1 = true" (mouseleave)="standardHoverAnimation1 = false">Github</a>
+                    <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation2 ? 'hover' : 'normal'"
+                        (mouseenter)="standardHoverAnimation2 = true" (mouseleave)="standardHoverAnimation2 = false">Live Test</a>
                 </div>
-                <button class="next-button">&#8594; Next Project</button>
+                <div class="button-wrapper">
+                    <button class="next-button minimal-btn">Next Project <img src="projects/Next.svg" alt="next Project"></button>
+                </div>
             </div>
         </div>
     </div>
