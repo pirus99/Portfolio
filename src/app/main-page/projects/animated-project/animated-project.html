@@ -11,7 +11,7 @@
         <div id="hoverWrap" class="hover-wrap" (mouseenter)="this.hover = true; this.animation = false" (mouseleave)="this.hover = false; this.animation = true"
             [ngClass]="hover ? 'hover-on' : ''">
             <div class="btn-right-wrap">
-                <a href="{{this.btnLink}}">
+                <a routerLink="{{this.btnLink}}">
                     <button class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
                         (mouseenter)="this.toggleHover()" (mouseleave)="this.toggleHover()">
                         {{this.btnText}}
