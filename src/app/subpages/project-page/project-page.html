@@ -2,23 +2,27 @@
     <div class="bg-wrapper">
         <div class="content-wrapper">
             <div class="left-wrapper">
-                <button routerLink="/" fragment="projects" class="back-button minimal-btn"><img src="projects/Back.svg" alt="go Back">Go Back</button>
+                <button routerLink="/" fragment="projects" class="back-button minimal-btn"><img src="projects/Back.svg" alt="go Back">{{this.lang.back}}</button>
 
                 <div class="left-content">
                     <div class="title">
-                        <app-title-line-blue [text]="'Join - MMC'"></app-title-line-blue>
+                        <app-title-line-blue [text]="this.lang.projects[this.projectIndex].title"></app-title-line-blue>
                     </div>
                     <div class="description">
-                        <h2>Description</h2>
-                        <p>Project description goes here.</p>
+                        <h2>{{this.lang.descriptionTitle}}</h2>
+                        <p>{{this.lang.projects[this.projectIndex].description}}</p>
                     </div>
                     <div class="details">
                         <h2>Details</h2>
-                        <p>Additional project details go here.</p>
+                        <p>{{this.lang.projects[this.projectIndex].details}}</p>
+                    </div>
+                    <div class="duration">
+                        <span><strong>{{this.lang.durationTitle}}</strong></span>&nbsp;
+                        <span>{{this.lang.projects[this.projectIndex].duration}}</span>
                     </div>
                     <div class="technologies">
                         <div class="tech-list">
-                            @for (tech of technologies; track $index) {
+                            @for (tech of this.lang.projects[this.projectIndex].technologies; track $index) {
                             <app-technologies [name]="tech.name">
                             </app-technologies>
                             }
@@ -28,13 +32,13 @@
             </div>
             <div class="right-wrapper">
                 <div class="image-container">
-                    <img src="projects/join.svg" alt="Project Image">
+                    <img src="{{this.lang.projects[this.projectIndex].image}}" alt="Project Image">
                 </div>
                 <div class="button-wrapper">
-                    <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation1 ? 'hover' : 'normal'"
+                    <a href="{{this.lang.projects[this.projectIndex].linkGithub}}" class="btn" [@buttonHover]="standardHoverAnimation1 ? 'hover' : 'normal'"
                         (mouseenter)="standardHoverAnimation1 = true"
                         (mouseleave)="standardHoverAnimation1 = false">Github</a>
-                    <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation2 ? 'hover' : 'normal'"
+                    <a href="{{this.lang.projects[this.projectIndex].linkTest}}" class="btn" [@buttonHover]="standardHoverAnimation2 ? 'hover' : 'normal'"
                         (mouseenter)="standardHoverAnimation2 = true"
                         (mouseleave)="standardHoverAnimation2 = false">Live Test</a>
                 </div>
