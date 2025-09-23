@@ -2,7 +2,7 @@
     <div class="bg-wrapper">
         <div class="content-wrapper">
             <div class="left-wrapper">
-                <button class="back-button minimal-btn"><img src="projects/Back.svg" alt="go Back">Go Back</button>
+                <button routerLink="/" fragment="projects" class="back-button minimal-btn"><img src="projects/Back.svg" alt="go Back">Go Back</button>
 
                 <div class="left-content">
                     <div class="title">
@@ -18,9 +18,10 @@
                     </div>
                     <div class="technologies">
                         <div class="tech-list">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                            @for (tech of technologies; track $index) {
+                            <app-technologies [name]="tech.name">
+                            </app-technologies>
+                            }
                         </div>
                     </div>
                 </div>
@@ -31,12 +32,15 @@
                 </div>
                 <div class="button-wrapper">
                     <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation1 ? 'hover' : 'normal'"
-                        (mouseenter)="standardHoverAnimation1 = true" (mouseleave)="standardHoverAnimation1 = false">Github</a>
+                        (mouseenter)="standardHoverAnimation1 = true"
+                        (mouseleave)="standardHoverAnimation1 = false">Github</a>
                     <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation2 ? 'hover' : 'normal'"
-                        (mouseenter)="standardHoverAnimation2 = true" (mouseleave)="standardHoverAnimation2 = false">Live Test</a>
+                        (mouseenter)="standardHoverAnimation2 = true"
+                        (mouseleave)="standardHoverAnimation2 = false">Live Test</a>
                 </div>
                 <div class="button-wrapper">
-                    <button class="next-button minimal-btn">Next Project <img src="projects/Next.svg" alt="next Project"></button>
+                    <button class="next-button minimal-btn">Next Project <img src="projects/Next.svg"
+                            alt="next Project"></button>
                 </div>
             </div>
         </div>
