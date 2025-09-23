@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { buttonHoverAnimation } from '../../main-page/animation-module';
 import { TitleLineBlue } from "../../shared/design/titles/title-line-blue/title-line-blue";
 import { Technologies } from "./technologies/technologies";
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
 import { LangService } from '../../lang-service';
 import { App } from '../../app';
 import * as langDE from './de.json';
@@ -16,18 +16,37 @@ import * as langEN from './en.json';
   animations: [buttonHoverAnimation]
 })
 export class ProjectPage {
-  projectIndex: number = 2;
+  @Input() projectIndex: number = 2;
   standardHoverAnimation1 = false;
   standardHoverAnimation2 = false;
   langDE = langDE;
   langEN = langEN;
   lang = langEN;
 
+  constructor(private langService: LangService, private route: ActivatedRoute) { }
+
   ngOnInit() {
     this.langToggle();
+
+    this.route.paramMap.subscribe(params => {
+      const idParam = params.get('id');
+
+      if (!idParam || isNaN(Number(idParam))) {
+        this.projectIndex = 0;
+      }
+
+      this.projectIndex = Number(idParam);
+    });
   }
 
-  constructor(private langService: LangService) { }
+  nextProject() {
+    if (this.projectIndex < this.lang.projects.length - 1) {
+      this.projectIndex++;
+    } else {
+      this.projectIndex = 0;
+    }
+    window.history.replaceState({}, '', `/projects/${this.projectIndex}`);
+  }
 
   langToggle() {
     this.langService.aclickEvent.subscribe((message) => {
@@ -38,14 +57,4 @@ export class ProjectPage {
       }
     })
   }
-
-  technologies: { name:string }[] =
-   [
-     { name: "HTML" },
-     { name: "CSS" },
-     { name: "JavaScript" },
-     { name: "TypeScript" },
-     { name: "Angular" },
-     { name: "Firebase" }
-   ];
 }
