@@ -1,14 +1,14 @@
 .about-content {
-    min-width: 70%;
+    width: 80%;
     max-width: 1050px;
     display: flex;
     margin: auto;
     padding-top: 144px;
     padding-bottom: 166px;
-    overflow: hidden;
+    overflow: visible;
 
     @media (max-width: 1050px) {
-        margin: 0 24px;
+        width: 90%;
     }
 
     .wrap-left {
@@ -167,6 +167,10 @@
             cursor: pointer;
         }
     }
+}
+
+.title-wrap {
+    width: 240px;
 }
 
 @media (max-width: 900px) {

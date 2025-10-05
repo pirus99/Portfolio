@@ -1,7 +1,7 @@
 <div class="hover-line-straight-wrap">
     <div class="btn">
         <a href="{{this.link}}">
-            <p #textP (mouseenter)="updateWidth()">{{this.text}}</p>
+            <p [ngStyle]="{'color': this.dark ? '#fff' : '#000', 'font-weight': this.dark ? '' : '700'}" #textP (mouseenter)="updateWidth()">{{this.text}}</p>
             <div class="img-wrap">
                 <img src="img/design/buttons/hover-line-straight.svg" alt="Circle Hover Image">
             </div>

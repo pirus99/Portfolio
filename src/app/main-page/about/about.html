@@ -28,7 +28,9 @@
         </div>
         <div class="wrap-right">
             <h5>{{this.lang.whoIs}}</h5>
-            <app-title-line-blue [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-line-blue>
+            <div class="title-wrap">
+                <app-title-line-blue [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-line-blue>
+            </div>
             <p>{{this.lang.text}}</p>
             <div class="btn-wrap">
                 <a href="#contact" class="btn" [@buttonHoverBlack]="standardHoverAnimation ? 'hover' : 'normal'"

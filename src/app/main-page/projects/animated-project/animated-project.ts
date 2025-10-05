@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { buttonHoverAnimation } from '../../animation-module';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-animated-project',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './animated-project.html',
   styleUrl: './animated-project.scss',
   animations: [buttonHoverAnimation]

@@ -288,6 +288,7 @@ input:checked+.slider:before {
         align-items: center;
 
         a {
+            color: white !important;
             margin: 8px;
             margin-top: 20px;
             font-size: 18px;
@@ -299,7 +300,7 @@ input:checked+.slider:before {
     display: none !important;
 }
 
-@media (max-width: 696px) {
+@media (max-width: 800px) {
     .desktop {
         display: none !important;
     }

@@ -14,6 +14,7 @@ export class TitleLineBlue {
   @Input() link: string = '';
   @Input() textColor: string = '';
   @Input() isVisible: boolean = false;
+  @Input() projectTitle: boolean = false;
 
   @HostBinding('style.--img-wrap-width') imgWrapWidth = '0px';
   @HostBinding('style.--img-wrap-offset') imgWrapOffset = '0px';
@@ -32,7 +33,7 @@ export class TitleLineBlue {
       this.width = 600;
       this.offset = 0;
     } else {
-      this.width = 450;
+      this.width = 250;
       this.offset = 0;
     }
     this.imgWrapWidth = `${this.width}px`;

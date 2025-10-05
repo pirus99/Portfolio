@@ -1,7 +1,7 @@
 <div class="hover-circle-wrap">
     <div class="btn">
         <a href="{{this.link}}">
-            <p>{{this.text}}</p>
+            <p [ngStyle]="{'color': this.dark ? '#fff' : '#000', 'font-weight': this.dark ? '' : '700'}">{{this.text}}</p>
             <div class="img-wrap">
                 <img src="img/design/buttons/hover-circle.svg" alt="Circle Hover Image">
             </div>

@@ -9,7 +9,8 @@ import { BtnClearLineZ } from '../design/buttons/btn-clear-line-z/btn-clear-line
 import * as langDE from './de.json';
 import * as langEN from './en.json';
 import { LangService } from '../../lang-service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
@@ -33,7 +34,21 @@ export class Header {
   langENclasses = 'active';
   langDEclasses = '';
 
+  isProjectsRoute: boolean = false;
+
   constructor(private langService: LangService, public router: Router) { }
+
+  ngOnInit(): void {
+    // Beim ersten Laden prüfen
+    this.checkRoute(this.router.url);
+
+    // Bei jeder Navigation prüfen
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.checkRoute(event.urlAfterRedirects);
+      });
+  }
 
   toggleLanguage() {
     App.toggleLanguage();
@@ -69,6 +84,10 @@ export class Header {
     }
   }
 
+  private checkRoute(url: string): void {
+    // URL kann z. B. '/projects' oder '/projects/...' sein
+    this.isProjectsRoute = url.startsWith('/projects');
+  }
 
 
   toggleBurgerMenu() {

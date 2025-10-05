@@ -7,8 +7,8 @@
     </nav>
     <div id="mobileMenu">
         <ul>
-            <li><app-btn-clear-circle (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle></li>
-            <li><app-btn-clear-line-straight (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
+            <li><app-btn-clear-circle [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle></li>
+            <li><app-btn-clear-line-straight [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
             </li>
             <li><app-btn-clear-line-wave (click)="toggleBurgerMenu()" [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
             </li>
@@ -43,8 +43,8 @@
     </div>
     <nav class="header desktop">
         <img src="logo-mp.png" alt="Logo" (click)="this.router.navigate([''])">
-        <app-btn-clear-circle [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle>
-        <app-btn-clear-line-straight [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
+        <app-btn-clear-circle [dark]="!isProjectsRoute" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle>
+        <app-btn-clear-line-straight [dark]="!isProjectsRoute" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
         <app-btn-clear-line-wave [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
         <app-btn-clear-line-z [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z>
         <div class="lang-switcher" id="langSwitcher">
