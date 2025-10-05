@@ -1,5 +1,5 @@
 <div class="hover-line-straight-wrap">
-    <div class="btn">
+    <div class="btn" [class.project-title]="projectTitle">
             <h2 #textP (mouseenter)="updateWidth()" [ngStyle]="{'color': this.textColor}">{{this.text}}</h2>
             <div id="imgWrap" #imgWrap class="img-wrap" [ngClass]="{animate: isVisible}">
                 <img src="img/design/title/blue-line.svg" alt="Circle Hover Image">

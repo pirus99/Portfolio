@@ -14,6 +14,7 @@ export class TitleLineBlue {
   @Input() link: string = '';
   @Input() textColor: string = '';
   @Input() isVisible: boolean = false;
+  @Input() projectTitle: boolean = false;
 
   @HostBinding('style.--img-wrap-width') imgWrapWidth = '0px';
   @HostBinding('style.--img-wrap-offset') imgWrapOffset = '0px';
