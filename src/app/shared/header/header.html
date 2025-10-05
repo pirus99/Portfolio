@@ -7,8 +7,8 @@
     </nav>
     <div id="mobileMenu">
         <ul>
-            <li><app-btn-clear-circle (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle></li>
-            <li><app-btn-clear-line-straight (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
+            <li><app-btn-clear-circle [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle></li>
+            <li><app-btn-clear-line-straight [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
             </li>
             <li><app-btn-clear-line-wave (click)="toggleBurgerMenu()" [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
             </li>
