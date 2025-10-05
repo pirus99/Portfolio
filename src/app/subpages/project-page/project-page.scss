@@ -2,6 +2,8 @@
     height: 100%;
     width: 100vw;
     overflow: hidden;
+    
+    overflow-y: scroll;
 }
 
 .bg-wrapper {
@@ -15,7 +17,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
 
 
     @media (max-width: 1130px) {
@@ -31,8 +32,29 @@
     }
 
     @media (max-width: 800px) {
+        height: auto;
         background-position: top;
         background-image: url(../../../../public/background/project_upright.png);
+    }
+    
+    @media (max-width: 750px) {
+        background-size: 110%;
+    }
+
+    @media (max-width: 670px) {
+        background-size: 140%;
+    }
+
+    @media (max-width: 570px) {
+        background-size: 200%;
+    }
+
+    @media (max-width: 430px) {
+        background-size: 250%;
+    }
+
+    @media (max-width: 380px) {
+        background-size: 320%;
     }
 }
 
