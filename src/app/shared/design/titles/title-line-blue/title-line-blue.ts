@@ -32,7 +32,7 @@ export class TitleLineBlue {
       this.width = 600;
       this.offset = 0;
     } else {
-      this.width = 450;
+      this.width = 250;
       this.offset = 0;
     }
     this.imgWrapWidth = `${this.width}px`;
