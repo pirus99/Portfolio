@@ -1,5 +1,4 @@
-<div class="w-100" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false"
-    (click)="this.isVisible = true">
+<div class="w-100">
     <div class="about-content" id="aboutMe">
         <div class="wrap-left">
             <div class="flex-col">
@@ -29,7 +28,7 @@
         <div class="wrap-right">
             <h5>{{this.lang.whoIs}}</h5>
             <div class="title-wrap">
-                <app-title-line-blue [text]="this.lang.title" [isVisible]="this.isVisible"></app-title-line-blue>
+                <app-title-line-blue [text]="this.lang.title"></app-title-line-blue>
             </div>
             <p>{{this.lang.text}}</p>
             <div class="btn-wrap">
