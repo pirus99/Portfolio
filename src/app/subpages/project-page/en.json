@@ -7,6 +7,7 @@
     {
       "id": 0,
       "title": "Join - mmc",
+      "hoverExtraWidth": 20,
       "image": "projects/join.svg",
       "description": "Task Manager inspired by the Kanban system. Join allows you to create tasks with categories and assign users. Tasks can then be moved via drag and drop on a clear board.",
       "details": "Join was created over 5 weeks in a three-person team as part of the Developer Akademie bootcamp. The three sprints were also organized via a Kanban board.",
@@ -24,6 +25,7 @@
     {
       "id": 1,
       "title": "El Pollo Loco",
+      "hoverExtraWidth": 70,
       "image": "projects/pollo-loco.png",
       "description": "Jump-and-run game built on object-oriented programming. Help Pepe collect coins and salsa bottles to defeat the wild chicken...",
       "details": "The project is completely class-based and uses a 2D canvas to render the objects. It was created during a three-week project work as part of the Developer Akademie.",
@@ -39,6 +41,7 @@
     {
       "id": 2,
       "title": "Da Bubble",
+      "hoverExtraWidth": 0,
       "image": "projects/DABubble.svg",
       "description": "This app is built following the example of Slack. It revolutionizes team communication and collaboration with its own intuitive web interface, real-time message transmission and robust channel organization.",
       "details": "Four-week project as part of the Developer Akademie.",
