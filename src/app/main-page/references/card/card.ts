@@ -16,6 +16,10 @@ export class Card {
   @Input() job: string = '';
   @Input() isVisible: boolean = false;
 
-
-
+  checkLinkedIn(): boolean {
+    if (this.link && this.link.includes('linkedin.com')) {
+      return true;
+    }
+    return false;
+  }
 }

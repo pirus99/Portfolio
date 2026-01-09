@@ -1,27 +1,30 @@
 {
-    "words": "IN IHREN WORTEN:",
+    "words": "IN EIGENEN WORTEN:",
     "title": "Was Kollegen denken",
     "cards": {
         "card0": {
-            "name": "Tobias Lange",
+            "name": "Gaetano Leanza",
             "job": "Frontend Developer",
-            "linkedIn": "https://linkedin.com",
+            "linkedIn": "",
+            "github": "https://github.com/Gaetano-Leanza",
             "pic": "A",
-            "comment": "Karl really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+            "comment": "Miles Pickull hat sich in unserem gemeinsamen Projekt als äußerst zuverlässig und teamorientiert erwiesen. Seine kreative Lösungen waren entscheidend für den Erfolg des Projekts. Miles war stets engagiert, kooperativ und ein wertvoller Partner – ich arbeite gerne mit ihm zusammen."
         },
         "card1": {
-            "name": "Maria Schäfer",
+            "name": "Christopher Hänsch",
             "job": "Frontend Developer",
-            "linkedIn": "https://linkedin.com",
+            "linkedIn": "",
+            "github": "https://github.com/Loqicx",
             "pic": "B",
-            "comment": "It was a great pleasure to work with Karl. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+            "comment": "Ich hatte das Vergnügen, im Rahmen unseres Projekts mit Miles Pickull zusammenzuarbeiten. Besonders beeindruckt hat mich die strukturierte und vorausschauende Arbeitsweise. Miles verstand es, komplexe Aufgaben klar zu priorisieren und für das Team transparent darzustellen. Durch die ruhige, lösungsorientierte Kommunikation entstand ein Arbeitsumfeld, in dem Herausforderungen effizient bewältigt wurden. Sein Beitrag war ein wesentlicher Faktor für den reibungslosen Projektablauf und den erfolgreichen Abschluss"
         },
         "card2": {
-          "name": "David Braun",
+          "name": "Marc Döhring",
             "job": "Frontend Developer",
-            "linkedIn": "https://linkedin.com",
+            "linkedIn": "",
+            "github": "https://github.com/Marc-Doehring",
             "pic": "A",
-            "comment": "Karl was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals."
+            "comment": "Miles Pickull war ein wichtiger Teil unseres Projektteams. Seine Expertise, Kreativität und positive Einstellung trugen maßgeblich zum Erfolg bei. Ich schätze seine Professionalität, Offenheit und Lösungsorientierung. Es war ein Vergnügen, mit ihm zu arbeiten."
         }
     }
 }

@@ -3,25 +3,28 @@
     "title": "Colleagues' Thoughts",
     "cards": {
         "card0": {
-            "name": "Tobias Lange",
+            "name": "Gaetano Leanza",
             "job": "Frontend Developer",
-            "linkedIn": "https://linkedin.com",
+            "linkedIn": "",
+            "github": "https://github.com/Gaetano-Leanza",
             "pic": "A",
-            "comment": "Karl really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+            "comment": "Miles Pickull proved to be extremely reliable and team-oriented in our joint project. His creative solutions were crucial to the project's success. Miles was always engaged, cooperative, and a valuable partner - I enjoy working with him."
         },
         "card1": {
-            "name": "Maria Schäfer",
+            "name": "Christopher Hänsch",
             "job": "Frontend Developer",
-            "linkedIn": "https://linkedin.com",
+            "linkedIn": "",
+            "github": "https://github.com/Loqicx",
             "pic": "B",
-            "comment": "It was a great pleasure to work with Karl. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+            "comment": "I had the pleasure of working with Miles Pickull on our project. I was particularly impressed by his structured and forward-thinking approach. Miles was able to clearly prioritize complex tasks and present them transparently to the team. Through his calm and solution-oriented communication, a work environment was created in which challenges were efficiently overcome. His contribution was a key factor in the smooth project execution and successful completion."
         },
         "card2": {
-          "name": "David Braun",
+          "name": "Marc Döhring",
             "job": "Frontend Developer",
-            "linkedIn": "https://linkedin.com",
+            "linkedIn": "",
+            "github": "https://github.com/Marc-Doehring",
             "pic": "A",
-            "comment": "Karl was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals."
+            "comment": "Miles Pickull was an important part of our project team. His expertise, creativity, and positive attitude significantly contributed to the success. I appreciate his professionalism, openness, and solution-oriented approach. It was a pleasure working with him."
         }
     }
 }

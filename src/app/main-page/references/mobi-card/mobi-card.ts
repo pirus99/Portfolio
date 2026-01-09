@@ -15,4 +15,11 @@ export class MobiCard {
   @Input() name: string = '';
   @Input() job: string = '';
   @Input() isVisible: boolean = true;
+
+  checkLinkedIn(): boolean {
+    if (this.link && this.link.includes('linkedin.com')) {
+      return true;
+    }
+    return false;
+  }
 }

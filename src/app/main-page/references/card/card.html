@@ -11,11 +11,17 @@
                     <h5>{{this.name}}</h5>
                     <h6>{{this.job}}</h6>
                 </div>
-                <div class="flex in-wrap">
-                    <img src="img/references/linked-in.svg" alt="">
-                    <p>Profile</p>
-                </div>
-                
+                @if (checkLinkedIn()) {
+                    <a class="flex in-wrap" href="{{this.link}}">
+                        <img src="img/references/linked-in.svg" alt="">
+                        <p>Profile</p>
+                    </a>
+                } @else {
+                    <a class="flex in-wrap git" href="{{this.link}}">
+                        <img class="git-logo" src="img/social/github-mark.svg" alt="">
+                        <p>Profile</p>
+                    </a>
+                }
             </div>
         </div>
     </div>
