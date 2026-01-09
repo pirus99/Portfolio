@@ -31,6 +31,7 @@ export class Header {
 
   langENclasses = 'active';
   langDEclasses = '';
+  modifyScroll: boolean = false;
 
   isProjectsRoute: boolean = false;
 
@@ -85,8 +86,12 @@ export class Header {
   private checkRoute(url: string): void {
     // URL kann z. B. '/projects' oder '/projects/...' sein
     this.isProjectsRoute = url.startsWith('/projects');
+    if (this.isProjectsRoute || url === '/legal') {
+      this.modifyScroll = false;
+    } else {
+      this.modifyScroll = true;
+    }
   }
-
 
   toggleBurgerMenu() {
     let burgerMenu = document.getElementById('burgerMenu');

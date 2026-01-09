@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { buttonHoverAnimationBlack } from '../animation-module';
 import { App } from '../../app';
+import { buttonHoverAnimationBlack } from '../animation-module';
+import { Component } from '@angular/core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { TitleLineBlue } from '../../shared/design/titles/title-line-blue/title-line-blue';
 import { LangService } from '../../lang-service';
 import * as langDE from './de.json';
@@ -8,22 +9,22 @@ import * as langEN from './en.json';
 
 @Component({
   selector: 'app-about',
-  imports: [TitleLineBlue],
+  imports: [TitleLineBlue, NgxPageScrollModule],
   templateUrl: './about.html',
   styleUrl: './about.scss',
   animations: [buttonHoverAnimationBlack]
 })
 export class About {
-  ngOnInit() {
-    this.langToggle();
-  }
-
   langDE = langDE;
   langEN = langEN;
   lang = langEN;
   isVisible = false;
 
   constructor(private langService: LangService) { }
+
+  ngOnInit() {
+    this.langToggle();
+  }
 
   langToggle() {
     this.langService.aclickEvent.subscribe((message) => {

@@ -12,7 +12,8 @@
             </li>
             <li><app-btn-clear-line-wave (click)="toggleBurgerMenu()" [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
             </li>
-            <li><app-btn-clear-line-z (click)="toggleBurgerMenu()" [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z></li>
+            <li><app-btn-clear-line-z (click)="toggleBurgerMenu()" [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z>
+            </li>
             <li>
                 <div class="lang-switcher" id="langSwitcher">
                     <div class="hover-wrap {{langENclasses}}">
@@ -43,10 +44,10 @@
     </div>
     <nav class="header desktop">
         <img src="logo-mp.png" alt="Logo" (click)="this.router.navigate([''])">
-        <app-btn-clear-circle [dark]="!isProjectsRoute" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle>
-        <app-btn-clear-line-straight [dark]="!isProjectsRoute" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
-        <app-btn-clear-line-wave [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
-        <app-btn-clear-line-z [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z>
+        <app-btn-clear-circle [dark]="!isProjectsRoute" [text]="this.lang.about" [link]="'#aboutMe'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="248" [scrollOffset]="100" ></app-btn-clear-circle>
+        <app-btn-clear-line-straight [dark]="!isProjectsRoute" [text]="this.lang.skills" [link]="'#skills'" [modifyScroll]="this.modifyScroll" ></app-btn-clear-line-straight>
+        <app-btn-clear-line-wave [text]="this.lang.projects" [link]="'#projects'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="600" [scrollOffset]="120"></app-btn-clear-line-wave>
+        <app-btn-clear-line-z [text]="this.lang.contact" [link]="'#contact'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="720" [scrollOffset]="10" ></app-btn-clear-line-z>
         <div class="lang-switcher" id="langSwitcher">
             <div class="hover-wrap {{langENclasses}}">
                 <a id="langEN" (click)="setLangEN()" onclick="langSwitch.checked = false" class="EN"

@@ -22,8 +22,11 @@
             </div>
             <div class="btn-wrap-col-r">
                 <h1 appHighlightLetter class="title-two">{{lang.developer}}</h1>
-                <a href="#contact" class="btn" [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
-                    (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">{{lang.getintouch}}</a>
+                <a href="#contact" pageScroll [pageScrollDuration]="640" [pageScrollOffset]="10" class="btn" 
+                    [@buttonHover]="standardHoverAnimation ? 'hover' : 'normal'"
+                    (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">
+                    {{lang.getintouch}}
+                </a>
             </div>
             <div class="image-border-wrap image-border-wrap-mobi mobi">
                 <img src="img/atf/polaroid-frame.png" alt="Picture of Miles">

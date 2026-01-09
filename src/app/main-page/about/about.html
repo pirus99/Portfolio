@@ -33,7 +33,8 @@
             </div>
             <p>{{this.lang.text}}</p>
             <div class="btn-wrap">
-                <a href="#contact" class="btn" [@buttonHoverBlack]="standardHoverAnimation ? 'hover' : 'normal'"
+                <a pageScroll [pageScrollDuration]="580" [pageScrollOffset]="10"
+                    href="#contact" class="btn" [@buttonHoverBlack]="standardHoverAnimation ? 'hover' : 'normal'"
                     (mouseenter)="toggleHover()" (mouseleave)="toggleHover()">{{this.lang.talk}}</a>
             </div>
         </div>

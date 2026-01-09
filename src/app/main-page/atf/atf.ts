@@ -6,11 +6,12 @@ import { BlueHoverBtn } from './blue-hover-btn/blue-hover-btn';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
 import { HighlightLetterDirective } from './highlight';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 
 @Component({
   selector: 'app-atf',
-  imports: [BlueHoverBtn, HighlightLetterDirective],
+  imports: [BlueHoverBtn, HighlightLetterDirective, NgxPageScrollModule],
   templateUrl: './atf.html',
   styleUrl: './atf.scss',
   animations: [buttonHoverAnimation]
