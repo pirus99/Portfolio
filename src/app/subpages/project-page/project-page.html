@@ -2,7 +2,7 @@
     <div class="bg-wrapper">
         <div class="content-wrapper">
             <div class="left-wrapper" (mouseenter)="this.isVisible = true" (mouseleave)="this.isVisible = false" (click)="this.isVisible = true">
-                <button routerLink="/" fragment="projects" class="back-button minimal-btn"><img src="projects/Back.svg" alt="go Back">{{this.lang.back}}</button>
+                <button routerLink="/" fragment="projects" class="back-button minimal-btn"><img src="img/projects/Back.svg" alt="go Back">{{this.lang.back}}</button>
 
                 <div class="left-content" *ngIf="childrenReady">
                     <div class="title">
@@ -43,7 +43,7 @@
                         (mouseleave)="standardHoverAnimation2 = false">Live Test</a>
                 </div>
                 <div class="button-wrapper">
-                    <button class="next-button minimal-btn" (click)="nextProject()">Next Project <img src="projects/Next.svg"
+                    <button class="next-button minimal-btn" (click)="nextProject()">Next Project <img src="img/projects/Next.svg"
                             alt="next Project"></button>
                 </div>
             </div>
