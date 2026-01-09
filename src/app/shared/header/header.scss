@@ -231,7 +231,8 @@ input:checked+.slider:before {
         background: rgba(0, 0, 0, 0.5);
         background-image: url(../../../../public/background/atf-bg.png);
         background-position: bottom;
-        height: 80vh !important;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     ul {
