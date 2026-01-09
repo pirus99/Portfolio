@@ -27,10 +27,10 @@ export class TitleLineYellow {
 
   updateWidth() {
     if(App.lang === 'langDE'){
-      this.width = 450;
+      this.width = 280;
       this.offset = -24;
     } else {
-      this.width = 450;
+      this.width = 280;
       this.offset = -24;
     }
     this.imgWrapWidth = `${this.width}px`;
