@@ -1,9 +1,7 @@
 .page-wrapper {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
-
-    overflow-y: scroll;
 }
 
 .bg-wrapper {
@@ -146,7 +144,7 @@
     @media (max-width: 308px) {
         background-size: 450% !important;
     }
-    
+
     @media (max-width: 274px) {
         background-size: 500% !important;
     }
