@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
-import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-btn-clear-line-wave',
-  imports: [NgxPageScrollModule, NgClass],
+  imports: [NgxPageScrollModule],
   templateUrl: './btn-clear-line-wave.html',
   styleUrl: './btn-clear-line-wave.scss'
 })

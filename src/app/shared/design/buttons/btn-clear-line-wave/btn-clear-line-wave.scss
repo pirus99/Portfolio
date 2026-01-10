@@ -35,7 +35,7 @@
 }
 
 .project {
-    @media (max-width: 985px) {
+    @media (max-width: 985px) and (min-width: 800px) {
         color: black !important;
     }
 }
