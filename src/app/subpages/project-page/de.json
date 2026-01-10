@@ -12,10 +12,11 @@
       "description": "Terminkalender inspiriert von dem Kanban-System. Join ermöglicht es Aufgaben mit Kategorien anzulegen und Nutzer zuzuweisen. Die Aufgaben können dann per Drag and Drop auf einem übersichtlichen Board verschoben werden.",
       "details": "Join wurde über 5 Wochen hinweg in einem Dreiköpfigen Team im Rahmen des Developer Akademie Bootcamps erstellt. Später fügte ich ein einfaches Django-Rest-API-Backend hinzu, um Firebase zu ersetzen. Diese Änderung ermöglichte es, Join als Docker Stack bereitzustellen, sodass es einfach komplett selbst gehostet werden kann.",
       "duration": "5 Wochen + 4 Wochen Backend",
+      "longProject": true,
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },
-        { "name": "TypeScript" },
+        { "name": "Type-Script" },
         { "name": "Angular" },
         { "name": "Django" },
         { "name": "Django Rest Framework" },
@@ -33,6 +34,7 @@
       "description": "Jump-and-Run-Spiel aufgebaut auf einer objektorientierten Programmierung. Hilf Pepe Coins und Salsa-Flaschen zu sammeln um die wilde Henne zu besiegen...",
       "details": "Das Projekt ist vollständig klassenbasiert aufgebaut und nutzt einen 2D-Canvas, um die Objekte zu rendern. Es entstand in einer dreiwöchigen Projektarbeit im Rahmen der Developer Akademie",
       "duration": "3 Wochen",
+      "longProject": false,
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },
@@ -49,6 +51,7 @@
       "description": "Diese App ist nach Vorbild von Slack gebaut. Sie revolutioniert Team-Kommunikation und Collaboration mit ihrem eigenen intuitiven Webinterface, Echtzeit-Nachrichtenübermittlung und robuster Kanal-Organisation.",
       "details": "Vierwöchiges Projekt im Rahmen der Developer Akademie.",
       "duration": "4 Wochen",
+      "longProject": false,
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },

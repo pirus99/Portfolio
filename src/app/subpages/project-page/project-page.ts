@@ -8,6 +8,7 @@ import { LangService } from '../../lang-service';
 import { App } from '../../app';
 import * as langDE from './de.json';
 import * as langEN from './en.json';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-project-page',

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { OnChanges, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-technologies',
@@ -12,7 +13,16 @@ export class Technologies {
   @Input() name: string = '';
 
   ngOnInit() {
-    if (!this.imgSrc) {
+    this.setIcon();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes) {
+      this.setIcon();
+    }
+  }
+
+  setIcon(): void {
       if (this.name === "HTML") {
         this.imgSrc = 'img/skills/icons/HTML.svg';
         this.imgAlt = 'HTML logo';
@@ -22,9 +32,6 @@ export class Technologies {
       } else if (this.name === "JavaScript") {
         this.imgSrc = 'img/skills/icons/Js.svg';
         this.imgAlt = 'JavaScript logo';
-      } else if (this.name === "TypeScript") {
-        this.imgSrc = 'img/skills/icons/Ts.svg';
-        this.imgAlt = 'TypeScript logo';
       } else if (this.name === "Angular") {
         this.imgSrc = 'img/skills/icons/Angular.svg';
         this.imgAlt = 'Angular logo';
@@ -40,10 +47,12 @@ export class Technologies {
       } else if (this.name === "Docker") {
         this.imgSrc = 'img/skills/icons/Docker.svg';
         this.imgAlt = 'Docker logo';
+      } else if (this.name === "Type-Script") {
+        this.imgSrc = 'img/skills/icons/Ts.svg';
+        this.imgAlt = 'TypeScript logo';
       } else if (this.name === "Django Rest Framework") {
         this.imgSrc = 'img/skills/icons/DRF.svg';
         this.imgAlt = 'Django Rest Framework logo';
       }
-    }
   }
 }

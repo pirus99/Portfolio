@@ -1,5 +1,5 @@
 :host {
-  --img-wrap-left: 0px;
+    --img-wrap-left: 0px;
 }
 
 .hover-circle-wrap {
@@ -13,9 +13,9 @@
             font-weight: 600;
 
             &:hover .img-wrap {
-                    width: 90px;
-                    transition: width 0.2s ease-in;
-                }
+                width: 90px;
+                transition: width 0.2s ease-in;
+            }
 
             .img-wrap {
                 position: absolute;
@@ -24,6 +24,7 @@
                 width: 0;
                 overflow: hidden;
                 transition: width 0.2s ease-in;
+
                 @media (max-width: 696px) {
                     left: -48px;
                 }
@@ -34,5 +35,11 @@
                 }
             }
         }
+    }
+}
+
+.project {
+    @media (max-width: 985px) {
+        color: black !important;
     }
 }

@@ -12,10 +12,11 @@
       "description": "Task Manager inspired by the Kanban system. Join allows you to create tasks with categories and assign users. Tasks can then be moved via drag and drop on a clear board.",
       "details": "Join was created over 5 weeks in a three-person team as part of the Developer Academy bootcamp. Later I added a simple Django Rest API backend to replace Firebase. These changes allowed Join to be served as a Docker package, so it could be completely self-hosted.",
       "duration": "5 weeks + 4 weeks backend",
+      "longProject": true,
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },
-        { "name": "TypeScript" },
+        { "name": "Type-Script" },
         { "name": "Angular" },
         { "name": "Django" },
         { "name": "Django Rest Framework" },
@@ -33,6 +34,7 @@
       "description": "Jump-and-run game built on object-oriented programming. Help Pepe collect coins and salsa bottles to defeat the wild chicken...",
       "details": "The project is completely class-based and uses a 2D canvas to render the objects. It was created during a three-week project work as part of the Developer Akademie.",
       "duration": "3 weeks",
+      "longProject": false,
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },
@@ -49,6 +51,7 @@
       "description": "This app is built following the example of Slack. It revolutionizes team communication and collaboration with its own intuitive web interface, real-time message transmission and robust channel organization.",
       "details": "Four-week project as part of the Developer Akademie.",
       "duration": "4 weeks",
+      "longProject": false,
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },

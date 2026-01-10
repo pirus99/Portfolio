@@ -9,9 +9,9 @@
             font-weight: 600;
 
             &:hover .img-wrap {
-                    width: 112px;
-                    transition: width 0.2s ease-in;
-                }
+                width: 112px;
+                transition: width 0.2s ease-in;
+            }
 
             .img-wrap {
                 position: absolute;
@@ -20,6 +20,7 @@
                 width: 0;
                 overflow: hidden;
                 transition: width 0.2s ease-in;
+
                 @media (max-width: 696px) {
                     left: -54px;
                 }
@@ -30,5 +31,11 @@
                 }
             }
         }
+    }
+}
+
+.project {
+    @media (max-width: 985px) {
+        color: black !important;
     }
 }
