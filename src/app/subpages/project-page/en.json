@@ -10,17 +10,20 @@
       "hoverExtraWidth": 20,
       "image": "img/projects/join.png",
       "description": "Task Manager inspired by the Kanban system. Join allows you to create tasks with categories and assign users. Tasks can then be moved via drag and drop on a clear board.",
-      "details": "Join was created over 5 weeks in a three-person team as part of the Developer Akademie bootcamp. The three sprints were also organized via a Kanban board.",
-      "duration": "5 weeks",
+      "details": "Join was created over 5 weeks in a three-person team as part of the Developer Academy bootcamp. Later I added a simple Django Rest API backend to replace Firebase. These changes allowed Join to be served as a Docker package, so it could be completely self-hosted.",
+      "duration": "5 weeks + 4 weeks backend",
       "technologies": [
         { "name": "HTML" },
         { "name": "CSS" },
         { "name": "TypeScript" },
         { "name": "Angular" },
-        { "name": "Firebase" }
+        { "name": "Django" },
+        { "name": "Django Rest Framework" },
+        { "name": "Python" },
+        { "name": "Docker" }
       ],
-      "linkGithub": "https://github.com/pirus99/join-mmc",
-      "linkTest": "https://miles.pickull.de/join"
+      "linkGithub": "https://github.com/pirus99/join",
+      "linkTest": "https://join.pickull.de/"
     },
     {
       "id": 1,
@@ -35,8 +38,8 @@
         { "name": "CSS" },
         { "name": "JavaScript" }
       ],
-      "linkGithub": "https://github.com/pirus99/pollo-loco",
-      "linkTest": "https://miles.pickull.de/pollo-loco"
+      "linkGithub": "https://github.com/pirus99/El-Pollo-Loco",
+      "linkTest": "https://miles.pickull.de/projekte/pollo-loco/"
     },
     {
       "id": 2,

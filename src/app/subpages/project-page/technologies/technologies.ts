@@ -31,6 +31,18 @@ export class Technologies {
       } else if (this.name === "Firebase") {
         this.imgSrc = 'img/skills/icons/Firebase.svg';
         this.imgAlt = 'Firebase logo';
+      } else if (this.name === "Django") {
+        this.imgSrc = 'img/skills/icons/Django.svg';
+        this.imgAlt = 'Django logo';
+      } else if (this.name === "Python") {
+        this.imgSrc = 'img/skills/icons/Python.svg';
+        this.imgAlt = 'Python logo';
+      } else if (this.name === "Docker") {
+        this.imgSrc = 'img/skills/icons/Docker.svg';
+        this.imgAlt = 'Docker logo';
+      } else if (this.name === "Django Rest Framework") {
+        this.imgSrc = 'img/skills/icons/DRF.svg';
+        this.imgAlt = 'Django Rest Framework logo';
       }
     }
   }
