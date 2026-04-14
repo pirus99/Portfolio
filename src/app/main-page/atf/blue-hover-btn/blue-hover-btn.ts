@@ -23,6 +23,7 @@ export class BlueHoverBtn implements AfterViewInit {
   constructor(private langService: LangService, private renderer: Renderer2) { }
 
   langToggle() {
+    this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
     this.langService.aclickEvent.subscribe((message) => {
       if (App.lang === 'langDE') {
         this.lang = langDE;

@@ -79,13 +79,13 @@ export class ProjectPage {
   }
 
   langToggle() {
+    this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
     this.langService.aclickEvent.subscribe((message) => {
       if (App.lang === 'langDE') {
         this.lang = langDE;
       } else {
         this.lang = langEN;
       }
-      this.computeWidths();
     })
   }
 

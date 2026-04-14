@@ -12,7 +12,7 @@ import * as langEN from './en.json';
   styleUrl: './legal-notice.scss'
 })
 export class LegalNotice {
- ngOnInit() {
+  ngOnInit() {
     this.langToggle();
   }
 
@@ -24,6 +24,7 @@ export class LegalNotice {
   constructor(private langService: LangService) { }
 
   langToggle() {
+    this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
     this.langService.aclickEvent.subscribe((message) => {
       if (App.lang === 'langDE') {
         this.lang = langDE;

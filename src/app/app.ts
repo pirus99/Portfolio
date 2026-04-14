@@ -10,7 +10,7 @@ import { Header } from './shared/header/header';
 })
 export class App {
   protected title = 'Portfolio';
-  public static lang: string = 'langEN';
+  public static lang: string = localStorage.getItem('lang') || 'langEN';
 
   public static toggleLanguage() {
        if (this.lang === 'langEN') {

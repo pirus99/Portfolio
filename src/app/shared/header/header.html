@@ -20,7 +20,7 @@
                         <a id="langEN" (click)="setLangEN()" onclick="langSwitchMobi.checked = false" class="EN">EN</a>
                     </div>
                     <label class="switch">
-                        <input id="langSwitchMobi" type="checkbox" (change)="toggleLanguage();" />
+                        <input id="langSwitchMobi" type="checkbox" [(ngModel)]="isChecked" (change)="toggleLanguage();" />
                         <span class="slider round"></span>
                     </label>
                     <div class="hover-wrap {{langDEclasses}}">
@@ -47,7 +47,7 @@
         <app-btn-clear-line-wave [text]="this.lang.projects" [link]="'#projects'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="600" [scrollOffset]="120"></app-btn-clear-line-wave>
         <app-btn-clear-line-z [text]="this.lang.contact" [link]="'#contact'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="720" [scrollOffset]="10" ></app-btn-clear-line-z>
         <div class="lang-switcher" id="langSwitcher">
-            <div class="hover-wrap {{langENclasses}}">
+            <div id="hoverWrapEN" class="hover-wrap {{langENclasses}}">
                 <a id="langEN" (click)="setLangEN()" onclick="langSwitch.checked = false" class="EN"
                     onmouseenter="imgHoverEN.classList.remove('d-none')"
                     onmouseleave="imgHoverEN.classList.add('d-none')">EN</a>
@@ -56,10 +56,10 @@
                 </div>
             </div>
             <label class="switch">
-                <input id="langSwitch" type="checkbox" (change)="toggleLanguage();" />
+                <input id="langSwitch" type="checkbox" [(ngModel)]="isChecked" (change)="toggleLanguage();" />
                 <span class="slider round"></span>
             </label>
-            <div class="hover-wrap {{langDEclasses}}">
+            <div id="hoverWrapDE" class="hover-wrap {{langDEclasses}}">
                 <a id="langDE" (click)="setLangDE();" onclick="langSwitch.checked = true" class="DE"
                     onmouseenter="imgHoverDE.classList.remove('d-none');"
                     onmouseleave="imgHoverDE.classList.add('d-none')">DE</a>

@@ -35,7 +35,9 @@ export class Header {
 
   isProjectsRoute: boolean = false;
 
-  constructor(private langService: LangService, public router: Router) { }
+  constructor(private langService: LangService, public router: Router) { 
+    this.loadLanguageFromStorage();
+  }
 
   ngOnInit(): void {
     // Beim ersten Laden prüfen
@@ -49,38 +51,67 @@ export class Header {
       });
   }
 
+  loadLanguageFromStorage(): void {
+    const savedLang = localStorage.getItem('lang');
+    
+    if (savedLang === 'langDE') {
+      App.lang = 'langDE';
+      this.lang = langDE;
+      this.isChecked = true;
+      this.langDEclasses = 'active';
+      this.langENclasses = '';
+    } else {
+      App.lang = 'langEN';
+      this.lang = langEN;
+      this.isChecked = false;
+      this.langENclasses = 'active';
+      this.langDEclasses = '';
+    }
+  }
+
   toggleLanguage() {
     App.toggleLanguage();
-    this.langService.ClickEvent('')
     this.langToggle();
+    this.langService.ClickEvent('');
   }
 
   setLangDE() {
-    App.lang = 'langDE';
     this.lang = langDE;
-    this.langService.ClickEvent('')
+    this.isChecked = true;
     this.langENclasses = '';
     this.langDEclasses = 'active';
+    App.lang = 'langDE';
+    this.storeLangPreference();
+    this.langService.ClickEvent('');
   }
 
   setLangEN() {
-    App.lang = 'langEN';
     this.lang = langEN;
-    this.langService.ClickEvent('');
+    this.isChecked = false;
     this.langENclasses = 'active';
     this.langDEclasses = '';
+    App.lang = 'langEN';
+    this.storeLangPreference();
+    this.langService.ClickEvent('');
   }
 
   langToggle() {
     if (App.lang === 'langDE') {
       this.lang = langDE;
+      this.isChecked = true;
       this.langENclasses = '';
       this.langDEclasses = 'active';
     } else {
       this.lang = langEN;
+      this.isChecked = false;
       this.langENclasses = 'active';
       this.langDEclasses = '';
     }
+    this.storeLangPreference();
+  }
+
+  storeLangPreference() {
+    localStorage.setItem('lang', App.lang);
   }
 
   private checkRoute(url: string): void {

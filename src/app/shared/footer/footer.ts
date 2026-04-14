@@ -27,6 +27,7 @@ export class Footer {
   }
 
   langToggle() {
+    this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
     this.langService.aclickEvent.subscribe((message) => {
       if (App.lang === 'langDE') {
         this.lang = langDE;

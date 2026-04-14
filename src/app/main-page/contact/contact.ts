@@ -30,7 +30,7 @@ export class Contact {
     if (ngForm.valid && ngForm.submitted) {
       try {
         this.sendEmail();
-        } catch (error) {
+      } catch (error) {
         console.error('Error sending email:', error);
       }
       this.resetForm(ngForm);
@@ -46,8 +46,8 @@ export class Contact {
   async sendEmail() {
     await fetch('/send-email.php', {
       method: 'POST',
-      headers: { 
-        'Content-Type': 'application/json' 
+      headers: {
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.contactData)
     });
@@ -147,6 +147,7 @@ export class Contact {
   constructor(private langService: LangService) { }
 
   langToggle() {
+    this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
     this.langService.aclickEvent.subscribe((message) => {
       if (App.lang === 'langDE') {
         this.lang = langDE;
