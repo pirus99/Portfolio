@@ -40,24 +40,24 @@ export class Skills {
     { name: 'JavaScript', icon: 'Js.svg' },
     { name: 'Typescript', icon: 'Ts.svg' },
     { name: 'Angular', icon: 'Angular.svg' },
-    { name: 'Firebase', icon: 'Firebase.svg' },
-    { name: 'Git', icon: 'Git.svg' },
-    { name: 'Rest-Api', icon: 'Rest-Api.svg' },
     { name: 'Material-Design', icon: 'Material-Design.svg' },
+    { name: 'Git', icon: 'Git.svg' },
     { name: 'Python', icon: 'Python.svg' },
-    { name: 'Linux', icon: 'Linux.svg' },
-    { name: 'Docker', icon: 'Docker.svg' },
+    { name: 'Django', icon: 'Django.svg' },
+    { name: 'Rest-Api', icon: 'Rest-Api.svg' },
     { name: 'SQL', icon: 'SQL.svg' },
+    { name: 'Docker', icon: 'Docker.svg' },
+    { name: 'Linux', icon: 'Linux.svg' },
     { name: 'Shell Scripting', icon: 'Shell-Scripting.svg' },
   ];
 
   iconsRow2 = [
-    { name: 'Rest-Api', icon: 'Rest-Api.svg' },
-    { name: 'Material-Design', icon: 'Material-Design.svg' },
     { name: 'Python', icon: 'Python.svg' },
-    { name: 'Linux', icon: 'Linux.svg' },
+    { name: 'Django', icon: 'Django.svg' },
+    { name: 'Rest-Api', icon: 'Rest-Api.svg' },
     { name: 'Docker', icon: 'Docker.svg' },
     { name: 'SQL', icon: 'SQL.svg' },
+    { name: 'Linux', icon: 'Linux.svg' },
     { name: 'Shell Scripting', icon: 'Shell-Scripting.svg' },
   ]
 
