@@ -8,6 +8,15 @@
                 <img src="img/design/buttons/hover-line-z.svg" alt="Circle Hover Image">
             </div>
         </a>
+    } @else if (this.legalNotice) {
+        <div style="display: block;">
+        <a href="{{this.link}}">
+            <p [ngStyle]="{'color': this.textColor}">{{this.text}}</p>
+            <div class="img-wrap z-left">
+                <img src="img/design/buttons/hover-line-z.svg" alt="Circle Hover Image">
+            </div>
+        </a>
+        </div>
     } @else {
         <a href="{{this.link}}" class="project">
             <p [ngStyle]="{'color': this.textColor}">{{this.text}}</p>

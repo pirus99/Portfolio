@@ -16,6 +16,7 @@ export class BtnClearLineZ implements OnInit{
   @Input() modifyScroll: boolean = false;
   @Input() scrollSpeed: number = 500;
   @Input() scrollOffset: number = 0;
+  @Input() legalNotice: boolean = false;
 
   @HostBinding('style.--img-wrap-left') imgWrapLeft = '-12px';
 
