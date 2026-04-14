@@ -1,9 +1,10 @@
 import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 import { NgStyle } from '@angular/common';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 @Component({
   selector: 'app-btn-clear-image-roll',
-  imports: [NgStyle],
+  imports: [NgStyle, NgxPageScrollModule],
   templateUrl: './btn-clear-image-roll.html',
   styleUrl: './btn-clear-image-roll.scss'
 })
@@ -14,6 +15,9 @@ export class BtnClearImageRoll {
   @Input() link: string = '';
   @Input() textColor: string = '';
   @Input() image: string = '';
+  @Input() scrollSpeed: number = 500;
+  @Input() scrollOffset: number = 0;
+  @Input() modifyScroll: boolean = false;
 
   constructor() {}
 
