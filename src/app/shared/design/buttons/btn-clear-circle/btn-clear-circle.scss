@@ -7,6 +7,7 @@
             text-decoration: none;
             color: white;
             font-weight: 600;
+            cursor: pointer;
 
             &:hover .img-wrap {
                     height: 42px;
@@ -20,6 +21,7 @@
                 height: 0;
                 overflow: hidden;
                 transition: height 0.2s ease-in;
+
                 @media (max-width: 696px) {
                     left: -52px;
                 }

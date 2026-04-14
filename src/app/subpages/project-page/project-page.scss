@@ -71,10 +71,6 @@
         background-size: 225%;
     }
 
-    @media (max-width: 460px) {
-        background-size: 225%;
-    }
-
     @media (max-width: 440px) {
         background-size: 240%;
     }
@@ -126,15 +122,15 @@
     }
 
     @media (max-width: 400px) {
-        background-size: 320% !important;
+        background-size: 320%;
     }
 
     @media (max-width: 360px) {
-        background-size: 350% !important;
+        background-size: 350%;
     }
     
     @media (max-width: 340px) {
-        background-size: 380% !important;
+        background-size: 380%;
     }
 
     @media (max-width: 320px) {

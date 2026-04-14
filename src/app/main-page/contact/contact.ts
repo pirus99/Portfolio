@@ -26,8 +26,13 @@ export class Contact {
   };
 
   onSubmit(ngForm: NgForm) {
+    console.log('Contact form submitted:', this.contactData);
     if (ngForm.valid && ngForm.submitted) {
-      console.log('Contact form submitted:', this.contactData);
+      try {
+        this.sendEmail();
+        } catch (error) {
+        console.error('Error sending email:', error);
+      }
       this.resetForm(ngForm);
       this.sent();
     } else {
@@ -36,6 +41,16 @@ export class Contact {
       this.checkName();
       this.checkBox();
     }
+  }
+
+  async sendEmail() {
+    await fetch('/send-email.php', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json' 
+      },
+      body: JSON.stringify(this.contactData)
+    });
   }
 
   sent() {
