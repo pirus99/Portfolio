@@ -4,12 +4,12 @@
     "text": "Here you can have a look on some of my Projects, please klick on the button to test them out!",
     "loco": {
         "title": "El Pollo Loco",
-        "text": "Jump and Run with throw Functions based on object-oriented approach. Help Pepe to get Coins, Marinade Chickens and fight aginst the Crazy Chicken.",
+        "text": "Jump and Run with throw Functions based on object-oriented approach. Help Pepe to get Coins and fight aginst the Crazy Chicken.",
         "button": "Project details"
     },
     "bubble": {
-        "title": "DA Bubble",
-        "text": "This App is a Slack Clone. It revolutionizes team communication and collaboration with its intuitive interface, realtime messaging, and robust channel organization.",
+        "title": "VideoFlix",
+        "text": "Videoflix is a video streaming app inspired by Netflix. It enables users to stream videos with real-time transcoding to ensure the best possible quality based on the current internet connection.",
         "button": "Project details"
     },
     "join": {

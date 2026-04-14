@@ -45,20 +45,21 @@
     },
     {
       "id": 2,
-      "title": "Da Bubble",
+      "title": "VideoFlix",
       "hoverExtraWidth": 0,
-      "image": "img/projects/DABubble.png",
-      "description": "This app is built following the example of Slack. It revolutionizes team communication and collaboration with its own intuitive web interface, real-time message transmission and robust channel organization.",
-      "details": "Four-week project as part of the Developer Akademie.",
+      "image": "img/projects/Videoflix.png",
+      "description": "Videoflix is a video streaming app inspired by Netflix. It enables users to stream videos with real-time transcoding to ensure the best possible quality based on the current internet connection.",
+      "details": "Videoflix fetches IMDb data automatically after video upload to provide metadata and posters. It was created during a four-week backend project as part of the Developer Akademie.",
       "duration": "4 weeks",
       "longProject": false,
       "technologies": [
-        { "name": "HTML" },
-        { "name": "CSS" },
-        { "name": "JavaScript" }
+      { "name": "Python" },
+      { "name": "Django" },
+      { "name": "Django Rest Framework" },
+      { "name": "Docker" }
       ],
-      "linkGithub": "https://github.com/pirus99/join-mmc",
-      "linkTest": "https://miles.pickull.de/join"
+      "linkGithub": "https://github.com/pirus99/Videoflix",
+      "linkTest": "https://videoflix.pickull.de/"
     }
   ]
 }
