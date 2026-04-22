@@ -13,20 +13,21 @@ import { Footer } from '../../shared/footer/footer';
   imports: [CommonModule, FormsModule, Footer],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
-  animations: [buttonHoverAnimation]
+  animations: [buttonHoverAnimation],
 })
 export class Contact {
-  isVisible = false;
+  isVisible: boolean = false;
+  errors: boolean = false;
+  reset: boolean = false;
 
   contactData = {
     name: '',
     email: '',
     subject: '',
-    box: ''
+    box: '',
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log('Contact form submitted:', this.contactData);
     if (ngForm.valid && ngForm.submitted) {
       try {
         this.sendEmail();
@@ -47,9 +48,9 @@ export class Contact {
     await fetch('/send-email.php', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.contactData)
+      body: JSON.stringify(this.contactData),
     });
   }
 
@@ -63,8 +64,6 @@ export class Contact {
     }
   }
 
-  reset = false;
-
   resetForm(ngForm: NgForm) {
     this.reset = true;
     this.checkMail();
@@ -76,7 +75,7 @@ export class Contact {
       name: '',
       email: '',
       subject: '',
-      box: ''
+      box: '',
     };
     this.clearErrors();
   }
@@ -86,46 +85,85 @@ export class Contact {
     inputs.forEach((input) => {
       input.classList.remove('error');
     });
+    let labels = document.querySelectorAll('label');
+    labels.forEach((label) => {
+      label.classList.remove('error');
+    });
     let checkbox = document.getElementById('policy') as HTMLInputElement;
     if (checkbox) {
       checkbox.classList.remove('error');
     }
+    this.errors = false;
   }
 
-  checkSubject() {
+  recheckErrors(name: string) {
+    if (this.errors) {
+      switch (name) {
+        case 'email':
+          this.checkMail(true);
+          break;
+        case 'subject':
+          this.checkSubject(true);
+          break;
+        case 'name':
+          this.checkName(true);
+          break;
+        case 'box':
+          this.checkBox();
+          break;
+      }
+    }
+  }
+
+  checkSubject(recheck: boolean = false) {
     let subject = document.getElementById('subject') as HTMLInputElement;
+    let subjectTitle = document.getElementById(
+      'subjectTitle',
+    ) as HTMLLabelElement;
     if (subject.value.length < 1) {
-      subject.placeholder = this.lang.form.subject[2];
+      subjectTitle.innerText = this.lang.form.subject[2];
+      subjectTitle.classList.add('error');
       subject.classList.add('error');
-    } else if (this.reset) {
-      subject.placeholder = this.lang.form.subject[1];
-      subject.classList.add('error');
+      this.errors = true;
+    } else if (this.reset || recheck) {
+      subjectTitle.innerText = this.lang.form.subject[0];
+      subjectTitle.classList.remove('error');
+      subject.classList.remove('error');
     }
   }
 
-  checkMail() {
+  checkMail(recheck: boolean = false) {
     let email = document.getElementById('email') as HTMLInputElement;
+    let emailTitle = document.getElementById('emailTitle') as HTMLLabelElement;
     if (email.value.length < 1) {
-      email.placeholder = this.lang.form.email[2];
+      emailTitle.innerText = this.lang.form.email[2];
+      emailTitle.classList.add('error');
       email.classList.add('error');
+      this.errors = true;
     } else if (email.pattern !== '' && !email.value.match(email.pattern)) {
-      email.value = '';
-      email.placeholder = this.lang.form.email[2];
+      emailTitle.innerText = this.lang.form.email[2];
+      emailTitle.classList.add('error');
       email.classList.add('error');
-    } else if (this.reset) {
-      email.placeholder = this.lang.form.email[1];
-      email.classList.add('error');
+      this.errors = true;
+    } else if (this.reset || recheck) {
+      emailTitle.innerText = this.lang.form.email[0];
+      emailTitle.classList.remove('error');
+      email.classList.remove('error');
     }
   }
 
-  checkName() {
+  checkName(recheck: boolean = false) {
     let name = document.getElementById('name') as HTMLInputElement;
+    let nameTitle = document.getElementById('nameTitle') as HTMLLabelElement;
     if (name.value.length < 1) {
-      name.placeholder = this.lang.form.name[2];
+      nameTitle.innerText = this.lang.form.name[2];
+      nameTitle.classList.add('error');
       name.classList.add('error');
-    } else if (this.reset) {
-      name.placeholder = this.lang.form.name[1];
-      name.classList.add('error');
+      this.errors = true;
+    } else if (this.reset || recheck) {
+      nameTitle.innerText = this.lang.form.name[0];
+      nameTitle.classList.remove('error');
+      name.classList.remove('error');
     }
   }
 
@@ -133,6 +171,9 @@ export class Contact {
     let checkbox = document.getElementById('policy') as HTMLInputElement;
     if (!checkbox.checked) {
       checkbox.classList.add('error');
+      this.errors = true;
+    } else {
+      checkbox.classList.remove('error');
     }
   }
 
@@ -144,7 +185,7 @@ export class Contact {
     this.langToggle();
   }
 
-  constructor(private langService: LangService) { }
+  constructor(private langService: LangService) {}
 
   langToggle() {
     this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
@@ -154,7 +195,7 @@ export class Contact {
       } else {
         this.lang = langEN;
       }
-    })
+    });
   }
 
   standardHoverAnimation = false;

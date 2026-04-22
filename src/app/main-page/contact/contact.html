@@ -7,8 +7,8 @@
             <p>{{this.lang.text}}</p>
             <p>{{this.lang.smallText}}</p>
             <div class="flex w-100 center desktop">
-                <div class="img-wrap">
-                    <div class="img" [ngClass]="{animate: isVisible}">
+                <div class="arrow-wrap">
+                    <div class="arrow" [ngClass]="{animate: isVisible}">
                         <img src="img/design/curved-arrow.png" alt="">
                     </div>
                 </div>
@@ -18,29 +18,29 @@
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" name="contact">
                 <div class="top">
                     <div class="field-wrap">
-                        <label for="name">{{this.lang.form.name[0]}}</label>
-                        <input [(ngModel)]="contactData.name" type="text" class="txt-input" name="name" id="name"
+                        <label id="nameTitle" for="name">{{this.lang.form.name[0]}}</label>
+                        <input [(ngModel)]="contactData.name" type="text" class="txt-input" name="name" id="name" (keyup)="this.recheckErrors('name')"
                             placeholder={{this.lang.form.name[1]}} required>
                     </div>
                 </div>
                 <div class="middle">
                     <div class="field-wrap">
-                        <label for="email">{{this.lang.form.email[0]}}</label>
-                        <input [(ngModel)]="contactData.email" type="text" class="txt-input" name="email" id="email"
+                        <label id="emailTitle" for="email">{{this.lang.form.email[0]}}</label>
+                        <input [(ngModel)]="contactData.email" type="text" class="txt-input" name="email" id="email" (keyup)="this.recheckErrors('email')"
                             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                             placeholder={{this.lang.form.email[1]}} required>
                     </div>
                 </div>
                 <div class="bottom">
                     <div class="field-wrap">
-                        <label for="subject">{{this.lang.form.subject[0]}}</label>
-                        <input #subject="ngModel" minlength="3" [(ngModel)]="contactData.subject" type="text"
+                        <label id="subjectTitle" for="subject">{{this.lang.form.subject[0]}}</label>
+                        <input #subject="ngModel" minlength="10" [(ngModel)]="contactData.subject" type="text" (keyup)="this.recheckErrors('subject')"
                             class="txt-input" name="subject" id="subject" placeholder={{this.lang.form.subject[1]}}
                             required>
                     </div>
                 </div>
                 <div class="checkbox">
-                    <input [(ngModel)]="contactData.box" for="policy" type="checkbox" name="policy" id="policy" class="custom-checkbox" required="true">
+                    <input [(ngModel)]="contactData.box" for="policy" type="checkbox" name="policy" id="policy" class="custom-checkbox" required="true" (pointermove)="this.recheckErrors('box')">
                     <label>{{this.lang.have}}<a href="privacy-policy">{{this.lang.policy}}</a>{{this.lang.read}}</label>
                 </div>
 

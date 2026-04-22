@@ -145,6 +145,10 @@
             .error::placeholder {
                 color: #ff3a00;
             }
+
+            .error {
+                color: #ff3a00;
+            }
         }
     }
 
@@ -200,12 +204,12 @@ p {
     display: none;
 }
 
-.img-wrap {
+.arrow-wrap {
     position: relative;
 
-    .img {
+    .arrow {
         position: absolute;
-        top: 68px;
+        top: 64px;
         left: 0;
         width: 0;
         overflow: hidden;
@@ -227,10 +231,10 @@ p {
 }
 
 .mobi {
-    .img-wrap {
+    .arrow-wrap {
     position: relative;
 
-    .img {
+    .arrow {
         position: absolute;
         top: 0px;
         left: -80px;
