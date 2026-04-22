@@ -16,6 +16,7 @@
         </div>
         <div class="right-wrap">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" name="contact">
+                <hr class="border-line" id="borderLineTop">
                 <div class="top">
                     <div class="field-wrap">
                         <label id="nameTitle" for="name">{{this.lang.form.name[0]}}</label>
@@ -23,6 +24,7 @@
                             placeholder={{this.lang.form.name[1]}} required>
                     </div>
                 </div>
+                <hr class="border-line" id="borderLineTopMiddle">
                 <div class="middle">
                     <div class="field-wrap">
                         <label id="emailTitle" for="email">{{this.lang.form.email[0]}}</label>
@@ -31,6 +33,7 @@
                             placeholder={{this.lang.form.email[1]}} required>
                     </div>
                 </div>
+                <hr class="border-line" id="borderLineBottomMiddle">
                 <div class="bottom">
                     <div class="field-wrap">
                         <label id="subjectTitle" for="subject">{{this.lang.form.subject[0]}}</label>
@@ -39,6 +42,7 @@
                             required>
                     </div>
                 </div>
+                <hr class="border-line" id="borderLineBottom">
                 <div class="checkbox">
                     <input [(ngModel)]="contactData.box" for="policy" type="checkbox" name="policy" id="policy" class="custom-checkbox" required="true" (pointermove)="this.recheckErrors('box')">
                     <label>{{this.lang.have}}<a href="privacy-policy">{{this.lang.policy}}</a>{{this.lang.read}}</label>
