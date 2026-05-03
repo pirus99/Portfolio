@@ -12,6 +12,15 @@
             z-index: 10;
         }
 
+        .lang-de {
+            @media (max-width: 420px) {
+                font-size: 54px;
+            }
+
+            @media (max-width: 350px) {
+                font-size: 44px;
+            }
+        }
 
         .img-clip {
             position: absolute;
