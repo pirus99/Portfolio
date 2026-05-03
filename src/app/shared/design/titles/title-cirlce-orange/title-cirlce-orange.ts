@@ -24,6 +24,7 @@ export class TitleCirlceOrange {
   ngAfterViewInit() {
     setTimeout(() => {
       this.updateWidth();
+      this.ComponentUpdate();
     }, 100);
     this.langWidthUpdate();
   }
