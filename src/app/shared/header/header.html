@@ -7,12 +7,12 @@
     </nav>
     <div id="mobileMenu">
         <ul>
-            <li><app-btn-clear-circle [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'"></app-btn-clear-circle></li>
-            <li><app-btn-clear-line-straight [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'"></app-btn-clear-line-straight>
+            <li><app-btn-clear-circle [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.about" [link]="'#aboutMe'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="248" [scrollOffset]="100"></app-btn-clear-circle></li>
+            <li><app-btn-clear-line-straight [dark]="true" (click)="toggleBurgerMenu()" [text]="this.lang.skills" [link]="'#skills'" [modifyScroll]="this.modifyScroll"></app-btn-clear-line-straight>
             </li>
-            <li><app-btn-clear-line-wave (click)="toggleBurgerMenu()" [text]="this.lang.projects" [link]="'#projects'"></app-btn-clear-line-wave>
+            <li><app-btn-clear-line-wave (click)="toggleBurgerMenu()" [text]="this.lang.projects" [link]="'#projects'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="600" [scrollOffset]="120"></app-btn-clear-line-wave>
             </li>
-            <li><app-btn-clear-line-z (click)="toggleBurgerMenu()" [text]="this.lang.contact" [link]="'#contact'"></app-btn-clear-line-z>
+            <li><app-btn-clear-line-z (click)="toggleBurgerMenu()" [text]="this.lang.contact" [link]="'#contact'" [modifyScroll]="this.modifyScroll" [scrollSpeed]="720" [scrollOffset]="10"></app-btn-clear-line-z>
             </li>
             <li>
                 <div class="lang-switcher" id="langSwitcher">
