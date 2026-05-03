@@ -39,7 +39,7 @@ export class Skills {
     { name: 'HTML', icon: 'HTML.svg' },
     { name: 'CSS', icon: 'CSS.svg' },
     { name: 'JavaScript', icon: 'Js.svg' },
-    { name: 'Typescript', icon: 'Ts.svg' },
+    { name: 'TypeScript', icon: 'Ts.svg' },
     { name: 'Angular', icon: 'Angular.svg' },
     { name: 'Material-Design', icon: 'Material-Design.svg' },
     { name: 'Git', icon: 'Git.svg' },

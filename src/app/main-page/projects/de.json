@@ -1,10 +1,10 @@
 {
     "title": "Projekte",
     "craft": "Meine",
-    "text": "Hier können Sie einen Blick auf meine Projekte werfen, Bitte drücken sie auf den Button und testen Sie selbst!",
+    "text": "Hier können Sie einen Blick auf meine Projekte werfen, bitte drücken Sie auf den Button und testen Sie selbst!",
     "loco": {
         "title": "El Pollo Loco",
-        "text": "Jump and Run mit throw Funktionen basierend auf einem objektorientierten Ansatz. Hilf Pepe Coins zu sammeln und kämpfe gegen das verrückte Huhn.",
+        "text": "Jump and Run mit throw Funktionen basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe Coins zu sammeln und kämpfen Sie gegen das verrückte Huhn.",
         "button": "Projekt Details"
     },
         "bubble": {
@@ -14,7 +14,7 @@
     },
     "join": {
         "title": "Join",
-        "text": "Aufgaben Organizer inspiriert vom Kanban System. Erstelle und Organisiere Aufgaben mit Drag and Drop Funktionen, weisen Sie den Aufgaben Nutzer und Kategorien hinzu.",
+        "text": "Aufgaben Organizer inspiriert vom Kanban System. Erstellen und Organisieren Sie Aufgaben mit Drag and Drop Funktionen, weisen Sie den Aufgaben Nutzer und Kategorien hinzu.",
         "button": "Projekt Details"
     }
 }
