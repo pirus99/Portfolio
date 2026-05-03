@@ -131,6 +131,9 @@ export class Header {
     if (burgerMenu) {
       burgerMenu.classList.toggle("close");
       overlay?.classList.toggle("overlay");
+
+      const isOpen = burgerMenu.classList.contains("close");
+      document.body.style.overflow = isOpen ? "hidden" : "auto";
     }
   }
 }
