@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { LangService } from '../../../lang-service';
+import { App } from '../../../app';
+import * as langDE from './de.json';
+import * as langEN from './en.json';
 
 @Component({
   selector: 'app-peel',
@@ -7,6 +11,27 @@ import { Component } from '@angular/core';
   styleUrl: './peel.scss',
 })
 export class Peel {
+  langDE = langDE;
+  langEN = langEN;
+  lang = langEN;
+
+  ngOnInit() {
+    this.langToggle();
+  }
+
+  constructor(private langService: LangService) { }
+
+  langToggle() {
+    this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
+    this.langService.aclickEvent.subscribe((message) => {
+      if (App.lang === 'langDE') {
+        this.lang = langDE;
+      } else {
+        this.lang = langEN;
+      }
+    })
+  }
+
   peelMobile = 'none';
   peel = 'none';
   peelTrig = false;
