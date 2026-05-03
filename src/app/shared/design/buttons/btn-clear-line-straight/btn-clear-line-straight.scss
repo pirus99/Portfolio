@@ -34,7 +34,7 @@
 
                 img {
                     height: 40px;
-                    width: 100px;
+                    width: var(--img-wrap-width);
                 }
             }
         }

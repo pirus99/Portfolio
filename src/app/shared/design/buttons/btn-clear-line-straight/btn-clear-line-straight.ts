@@ -25,8 +25,12 @@ export class BtnClearLineStraight {
 
   updateWidth() {
     if(App.lang === 'langDE'){
-      this.width = 220;
+      this.width = 120;
       this.offset = -10;
+      if (window.innerWidth <= 696) {
+        this.width = 120;
+        this.offset = -60;
+      }
     } else {
       this.width = 100;
       this.offset = -30;
