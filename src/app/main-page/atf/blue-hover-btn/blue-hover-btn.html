@@ -5,7 +5,7 @@
             <img src="img/atf/waving_hand.svg" alt="" />
         </div>
     </div>
-    <button class="hover-blue" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <button #hoverBlue class="hover-blue" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" (pointerup)="onMobileClick()">
         <span class="text-wrapper" #textWrapper>
             <span #defaultText class="button-text" [class.visible]="!hover" [class.hidden]="hover">
                 {{ this.lang.helloworld }}
