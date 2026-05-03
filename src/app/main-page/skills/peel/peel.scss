@@ -1,0 +1,102 @@
+.peel-wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    rotate: 8deg;
+    margin-top: 80px;
+    margin-left: 24px;
+
+    .peel-default {
+        position: relative;
+        z-index: 10;
+
+        .peel-arrow {
+            position: absolute;
+            top: 28%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 42px;
+        }
+
+        .peel-text {
+            position: absolute;
+            width: 80%;
+            top: 42%;
+            left: 48%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-family: Kalam-regular;
+            font-weight: 400;
+            color: #fffcfc;
+        }
+    }
+
+    .peel-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        cursor: pointer;
+    }
+
+    .peel-open {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 6;
+
+        .peel-open-text {
+            position: absolute;
+            top: 22%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            font-size: 18px;
+            line-height: 105%;
+            text-align: center;
+            font-family: Bricolage;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .peel-open-tech {
+            position: absolute;
+            top: 64%;
+            left: 64%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;
+            font-family: Bricolage;
+            font-weight: 400;
+            color: #ffffff;
+
+            .tech {
+                width: 32px;
+                height: 32px;
+                margin: 4px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+
+                p {
+                    margin: 4px;
+                }
+            }
+        }
+    }
+
+    .peel-bg {
+        width: 100%;
+        height: 100%;
+    }
+}

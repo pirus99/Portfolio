@@ -1,0 +1,23 @@
+<div class="peel-wrap" (mouseenter)="peel='start'; peelHandler();" (mousedown)="peel='end'; peelHandler();">
+    <div class="peel-default" id="peelDefault">
+        <img class="peel-bg" src="img/skills/peel/default.png" alt="Blue Background 'paper' with one corner peeled">
+        <img class="peel-arrow" src="img/skills/peel/arrow.png" alt="Pull to peel">
+        <h3 class="peel-text">Pull to peel</h3>
+    </div>
+    <img class="peel-hover peel-bg" id="peelHover" (mouseleave)="peel='none'; peelHandler();" src="img/skills/peel/variant.png"
+        alt="A more peeled Blue Background 'paper' with one corner peeled to half">
+    <div class="peel-open" id="peelOpen">
+        <img class="peel-bg" src="img/skills/peel/open.png" alt="A Yellow Background 'paper' with orange waves in upper left and lower right corner">
+        <p class="peel-open-text">Also, I'm interested in diving into:</p>
+        <div class="peel-open-tech">
+            <div class="tech">
+                <img src="img/skills/icons/React_white.png" alt="React Icon">
+                <p>React</p>
+            </div>
+            <div class="tech">
+                <img src="img/skills/icons/Vue_white.png" alt="Vue Icon">
+                <p>Vue.js</p>
+            </div>
+        </div>
+    </div>
+</div>

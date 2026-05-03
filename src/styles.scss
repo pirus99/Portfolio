@@ -7,6 +7,10 @@
     font-family: Kalam;
     src: url(../public/fonts/Kalam/Kalam-Bold.ttf);
 }
+@font-face {
+    font-family: Kalam-regular;
+    src: url(../public/fonts/Kalam/Kalam-Regular.ttf);
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Bricolage }

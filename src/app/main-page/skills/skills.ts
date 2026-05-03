@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Peel } from './peel/peel';
 import { TitleCirlceOrange } from '../../shared/design/titles/title-cirlce-orange/title-cirlce-orange';
 import { LangService } from '../../lang-service';
 import { App } from '../../app';
@@ -7,7 +8,7 @@ import * as langEN from './en.json';
 
 @Component({
   selector: 'app-skills',
-  imports: [TitleCirlceOrange],
+  imports: [TitleCirlceOrange, Peel],
   templateUrl: './skills.html',
   styleUrl: './skills.scss'
 })
@@ -19,7 +20,6 @@ export class Skills {
 
   ngOnInit() {
     this.langToggle();
-    this.peelHandler();
   }
 
   constructor(private langService: LangService) { }
@@ -62,61 +62,9 @@ export class Skills {
     { name: 'Shell Scripting', icon: 'Shell-Scripting.svg' },
   ]
 
+  isMaxWith850() {
+    return window.innerWidth <= 850;
+  }
+
   isVisible = false;
-
-  peelMobile = 'none';
-  peel = 'none';
-  peelTrig = false;
-
-  peelHandler() {
-    this.peelDesk();
-    this.peelMobi();
-  }
-
-  peelDesk() {
-    if (this.peel === 'none' && !this.peelTrig) {
-      const peelDefault = document.getElementById('peelDefault');
-      if (peelDefault) {
-        peelDefault.style.opacity = '1';
-        peelDefault.style.zIndex = '10';
-      }
-    } else if (this.peel === 'start') {
-      const peelDefault = document.getElementById('peelDefault');
-      if (peelDefault) {
-        peelDefault.style.opacity = '0';
-        peelDefault.style.zIndex = '4';
-      }
-    } else {
-      const peelHover = document.getElementById('peelHover');
-      if (peelHover) {
-        peelHover.style.opacity = '0';
-        peelHover.style.zIndex = '4';
-        this.peelTrig = true;
-      }
-    }
-  }
-
-  peelMobi() {
-    if (this.peelMobile === 'none' && !this.peelTrig) {
-      const peelDefault = document.getElementById('peelDefaultMobi');
-      if (peelDefault) {
-        peelDefault.style.opacity = '1';
-        peelDefault.style.zIndex = '10';
-      }
-    } else {
-      const peelDefault = document.getElementById('peelDefaultMobi');
-      if (peelDefault) {
-        peelDefault.style.opacity = '0';
-        peelDefault.style.zIndex = '4';
-      }
-      setTimeout(() => {
-        const peelHover = document.getElementById('peelHoverMobi');
-        if (peelHover) {
-          peelHover.style.opacity = '0';
-          peelHover.style.zIndex = '4';
-          this.peelTrig = true;
-        }
-      }, 100);
-    }
-  }
 }

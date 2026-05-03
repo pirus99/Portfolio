@@ -26,26 +26,18 @@
                     }
                 </div>
             </div>
-            <div class="peel-wrap desktop" (mouseenter)="peel='start'; peelHandler();"
-                (mousedown)="peel='end'; peelHandler();">
-                <img class="peel-default" id="peelDefault" src="img/skills/peel/default.png"
-                    alt="Click to view also interested in">
-                <img class="peel-hover" id="peelHover" (mouseleave)="peel='none'; peelHandler();"
-                    src="img/skills/peel/variant.png" alt="Also interested in">
-                <img class="peel-open" id="peelOpen" src="img/skills/peel/open.png"
-                    alt="Also interested in Ract Vue.js">
+            @if(!this.isMaxWith850()) {
+            <div class="peel-wrap desktop">
+                <app-peel></app-peel>
             </div>
+            }
         </div>
+        @if(this.isMaxWith850()) {
         <div class="peel-mobi-container">
-            <div class="peel-wrap mobi" (mouseenter)="peelMobile='start'; peelHandler();"
-                (mousedown)="peelMobile='end'; peelHandler();">
-                <img class="peel-default" id="peelDefaultMobi" src="img/skills/peel/default.png"
-                    alt="Click to view also interested in">
-                <img class="peel-hover" id="peelHoverMobi" (mouseleave)="peelMobile='none'; peelHandler();"
-                    src="img/skills/peel/variant.png" alt="Also interested in">
-                <img class="peel-open" id="peelOpenMobi" src="img/skills/peel/open.png"
-                    alt="Also interested in Ract Vue.js">
+            <div class="mobi">
+                <app-peel></app-peel>
             </div>
         </div>
+        }
     </div>
 </div>
