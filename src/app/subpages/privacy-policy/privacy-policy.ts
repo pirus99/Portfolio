@@ -21,8 +21,15 @@ export class PrivacyPolicy {
   langEN = langEN;
   lang = langEN;
   isVisible = false;
+  textSize = 64;
 
   constructor(private langService: LangService) { }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.updateFont();
+    }, 200);
+  }
 
   langToggle() {
     this.lang = localStorage.getItem('lang') === 'langDE' ? langDE : langEN;
@@ -33,5 +40,15 @@ export class PrivacyPolicy {
         this.lang = langEN;
       }
     })
+  }
+
+  updateFont() {
+    if (window.innerWidth < 330) {
+      this.textSize = 32;
+    } else if (window.innerWidth < 390) {
+      this.textSize = 42;
+    } else if (window.innerWidth < 480) {
+      this.textSize = 52;
+    }
   }
 }
