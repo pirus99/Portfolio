@@ -13,6 +13,7 @@ export class TitleLineBlue {
   @Input() text: string = '';
   @Input() link: string = '';
   @Input() textColor: string = '';
+  @Input() textSize: number = 0;
   @Input() isVisible: boolean = false;
   @Input() autoShrink: boolean = false;
   @Input() imgWidth: number = 0;
