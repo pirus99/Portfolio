@@ -1,7 +1,7 @@
 <div class="page-wrapper">
     <div class="bg-wrapper">
         <div class="title-wrapper">
-            <app-title-line-blue [text]="this.lang.title" [textColor]="'white'" [isVisible]="this.isVisible"></app-title-line-blue>
+            <app-title-line-blue [textSize]="this.textSize" [text]="this.lang.title" [textColor]="'white'" [isVisible]="this.isVisible"></app-title-line-blue>
         </div>
     </div>
     <div class="legal-wrapper" (pointerenter)="isVisible = true" (pointerleave)="isVisible = false">
